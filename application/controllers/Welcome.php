@@ -1,0 +1,87 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+class Welcome extends CI_Controller {
+
+	/**
+	 * Index Page for this controller.
+	 *
+	 * Maps to the following URL
+	 * 		http://example.com/index.php/welcome
+	 *	- or -
+	 * 		http://example.com/index.php/welcome/index
+	 *	- or -
+	 * Since this controller is set as the default controller in
+	 * config/routes.php, it's displayed at http://example.com/
+	 *
+	 * So any other public methods not prefixed with an underscore will
+	 * map to /index.php/welcome/<method_name>
+	 * @see https://codeigniter.com/user_guide/general/urls.html
+	 */
+	public function __construct()
+	{
+		parent::__construct();
+		$this->load->model('m_cafe');
+		$this->load->helper('url');
+	}
+
+	public function index()
+	{
+		$this->load->view('tampilan');
+
+	}
+
+		public function profil()
+	{
+		$this->load->view('profil');
+	}
+
+		public function menu()
+	{
+		$this->load->view('menu');
+	}
+
+	public function daftar_pegawai()
+	{
+		$data['pegawai'] = $this->m_cafe->pegawai('daftar_pegawai')->result();
+		$this->load->view('daftar_pegawai', $data);
+	}
+
+	public function tambah_pegawai()
+	{
+		$this->load->view('tambah_pegawai');
+	}
+
+	public function tambah_aksi()
+	{
+		$Name = $this->input->post('Name');
+		$Date = $this->input->post('Date');
+		$Address = $this->input->post('Address');
+
+		$data = array
+		(	'name' => $Name,
+			'TTL' => $Date,
+			'address' => $Address );
+
+		$this->m_cafe->input('pegawai',$data);
+		redirect('Welcome/index');
+	}
+
+	public function hapus($id)
+	{
+			$where = array ('id' => $id);
+			$this->m_cafe->hapus_daftar('pegawai',$where);
+			redirect('Welcome/index');
+	}
+
+		public function laporan()
+	{
+		$this->load->view('laporan');
+	}
+
+	public function grafik()
+	{
+		$this->load->view('grafik');
+	}
+
+}
