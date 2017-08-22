@@ -64,14 +64,37 @@ class Welcome extends CI_Controller {
 			'address' => $Address );
 
 		$this->m_cafe->input('pegawai',$data);
-		redirect('Welcome/index');
+		redirect('Welcome/daftar_pegawai');
 	}
 
 	public function hapus($id)
 	{
 			$where = array ('id' => $id);
 			$this->m_cafe->hapus_daftar('pegawai',$where);
-			redirect('Welcome/index');
+			redirect('Welcome/daftar_pegawai');
+	}
+
+	public function edit_pegawai($id)
+	{
+		$where = array('id' => $id );
+		$data['user'] = $this->m_cafe->edit_pegawai('pegawai',$where)->result();
+		$this->load->view('edit_pegawai', $data);
+	}
+
+	public function update_pegawai($id)
+	{
+		$Name = $this->input->post('Name');
+		$Date = $this->input->post('Date');
+		$Address = $this->input->post('Address');
+
+		$data = array ('name' => $Name,
+					   'TTL' => $Date,
+			           'address' => $Address);
+		
+		$where = array ('id' => $id);
+
+		$this->m_cafe->update('pegawai',$where,$data);
+		redirect('Welcome/daftar_pegawai');
 	}
 
 		public function laporan()

@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class M_cafe extends CI_Model {
+class M_cafe extends CI_Model { 
 
 	public function pegawai($table)
 		{
@@ -18,6 +18,23 @@ class M_cafe extends CI_Model {
 		$this->db->where($where);
 		$this->db->delete($table);
 	}
+
+	public function edit_pegawai($table,$where)
+	{
+		return $this->db->get_where($table,$where);
+	}
+
+	public function update_daftar()
+	{
+		return $this->db->get('pegawai');
+	}
+
+	public function update($table,$where,$data)
+	{
+		$this->db->where($where);
+		$this->db->update($table,$data);
+	}
+
 
 }
 

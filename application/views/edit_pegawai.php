@@ -1,3 +1,4 @@
+<?php echo "string"; ?>
 <!DOCTYPE html>
 <html lang="en"><head>
         <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
@@ -68,7 +69,8 @@
 					  <hr>              
 		   
 					</div><!--/col-->
-					<form action="<?php echo base_url('index.php/Welcome/tambah_aksi') ; ?>" method="post">
+					<?php foreach ($user as $u ) { ?>
+<form action="<?php echo base_url('index.php/Welcome/update_pegawai/'.$u->id) ; ?>" method="post">
 					  
 						<div class="panel panel-default">
 							<div class="panel-heading">
@@ -83,20 +85,20 @@
 							   <div class="control-group">
 								  <label>Name</label>
 								  <div class="controls">
-								   <input class="form-control" placeholder="Enter Name" type="text" name="Name">
+								   <input class="form-control" placeholder="Enter Name" type="text" name="Name" value="<?php echo $u->name; ?>">
 								  </div>
 								</div> 
 								    <div class="control-group">
 								  <label>Date</label>
 								  <div class="controls">
-								   <input class="form-control" placeholder="Enter Name" type="date" name="Date">
+								   <input class="form-control" placeholder="Enter Name" type="text" id="tanggal" name="Date" value="<?php echo $u->TTL ;?>">
 								  </div>
 								</div>  
 								
 								<div class="control-group">
 								  <label>Address</label>
 								  <div class="controls">
-									<textarea class="form-control" name="Address"></textarea>
+									<textarea class="form-control" name="Address" value="<?php echo $u->address; ?>"></textarea>
 								  </div>
 								</div> 
 								  </div>
@@ -111,8 +113,9 @@
 									</button><br><br>
 									</div>
 									</div>
-								</div> 
-								</form>  
+								</div>
+								<?php } ?>
+								</form>   
 						
 						  </div><!--/panel content-->
 						</div><!--/panel-->
@@ -126,8 +129,9 @@
 		</div>
 		<!-- /Main -->
         
-		<script type="text/javascript" src="assets/js/jquery.js"></script>
-        <script type="text/javascript" src="assets/js/bootstrap.js"></script>
+		<script type="text/javascript" src="<?php echo base_url('assets/js/jquery.js'); ?>"></script>
+        <script type="text/javascript" src="<?php echo base_url('assets/js/bootstrap.js'); ?>"></script>
+        <script type="text/javascript" src="<?php echo base_url('assets/js/bootstrap-datepicker.js'); ?>"></script>
         <script type="text/javascript">
         $(document).ready(function() {
             $(".alert").addClass("in").fadeOut(4500);
@@ -136,5 +140,16 @@
 			});
         });
         </script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('#tanggal').datepicker({
+                 //merubah format tanggal datepicker ke dd-mm-yyyy
+                    format: "yyyy-mm-dd",
+                    //aktifkan kode dibawah untuk melihat perbedaanya, disable baris perintah diatasa
+                    //format: "dd-mm-yyyy",
+                    autoclose: true
+                });
+            });
+</script>
     
 </body></html>

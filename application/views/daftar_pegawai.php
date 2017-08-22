@@ -72,12 +72,13 @@
 						<div class="panel panel-default">
 							<div class="panel-heading">
 								<div class="panel-title">
-								<h4>Post Request</h4>
+								<h4>Daftar Pegawai</h4>
 								</div>
 							</div>
 							<div class="panel-body">
-							<a href="<?php echo base_url('index.php/Welcome/tambah_pegawai') ; ?>" class="btn btn-primary"><center>Tambah Pegawai</center></a>   
 
+							<a href="<?php echo base_url('index.php/Welcome/tambah_pegawai') ; ?>" class="btn btn-primary"><center>Tambah Pegawai</center></a>   
+							<br><br>
 								<div class="row-md-6">
 								<table border="1" class="table table-bordered">
 									<thead>
@@ -100,7 +101,7 @@
 											<td><?php echo $u->TTL ; ?></td>
 											<td><?php echo $u->address ; ?></td>
 											<td>
-												<a href="<?php echo base_url('index.php/Welcome/edit_data/'.$u->id) ; ?>" class="btn btn-primary"><i class="glyphicon glyphicon-pencil"></i></a>
+												<a href="<?php echo base_url('index.php/Welcome/edit_pegawai/'.$u->id) ; ?>" class="btn btn-primary"><i class="glyphicon glyphicon-pencil"></i></a>
 												<a href="<?php echo base_url('index.php/Welcome/hapus/'.$u->id) ; ?>" class="btn btn-danger"><i class="glyphicon glyphicon-trash"></i></a>
 											</td>
 										</tr>
