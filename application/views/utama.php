@@ -43,10 +43,11 @@
                     
                     <div class="menu-wrapper">
                         <ul class="menu">
-                            <li><a class="homebutton" href="#">Home</a></li>
+                            <li><a class="homebutton" id="#homebutton">Home</a></li>
                             <li><a class="show-1" href="#">MAKANAN & MINUMAN</a></li>
                             <li><a class="show-2" href="#">Gallery</a></li>
-                            <li><a rel="nofollow" href="login.php" target="_parent">LOGIN ADMIN</a></li>
+                            <li><a class="show-3" href="#">About</a></li>
+                            <li><a rel="nofollow" href="<?php echo base_url('index.php/Welcome/login')?>" target="_parent">LOGIN ADMIN</a></li>
                         </ul> <!-- /.menu -->
                         <a href="#" class="toggle-menu"><i class="fa fa-bars"></i></a>
                     </div> <!-- /.menu-wrapper -->
@@ -58,11 +59,12 @@
                 </div> <!-- /.sidebar-menu -->
             </div> <!-- /.col-md-4 -->
 
-             <div class="col-md-8 col-sm-12">
+            <div class="col-md-8 col-sm-12">
+
                 <div id="menu-container">
                     <div id="menu-1" class="about content">
                       <h2 style="color: white;">NO. MEJA : <input type="text">
-                      <button class="btn-lg"><a href="tabel.php">PESAN</a></button>
+                      <button class="btn-lg"><a href="application/views/tabel.php">PESAN</a></button>
                       </h2>
 
                         <div class="row">
@@ -371,6 +373,18 @@
                         </div> <!-- /.row -->
                     </div> <!-- /.gallery -->
                     </div> <!-- /.services -->
+                    <div id="menu-3" class="about">
+                        <div class="row">
+                        	
+                            <div class="col-md-12">
+                                <div class="toggle-content text-center spacing">
+                                    <h3>ABOUT US</h3>
+                                    
+                                </div>
+                            </div> <!-- /.col-md-12 -->
+                        </div> <!-- /.row -->
+                    </div> <!-- /.contact -->
+
                     </div>
                     </div>
 

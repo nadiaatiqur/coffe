@@ -3,12 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <title>Sign-Up/Login Form</title>
-  <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-
-  
-      <link rel="stylesheet" href="css/login.css">
-      <script src="js/login.js"></script>
+  <link rel="stylesheet" type="text/css" href="<?php echo base_url('asset/css/login.css'); ?> ">
+  <link rel="stylesheet" type="text/css" href="<?php echo base_url('https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600'); ?>">
+   <link rel="stylesheet" type="text/css" href="<?php echo base_url('https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css'); ?>">
+  <script src="<?php echo base_url('asset/js/login.js'); ?>"></script>
 </head>
 
 <body>
