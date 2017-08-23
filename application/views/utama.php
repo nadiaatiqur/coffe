@@ -47,7 +47,7 @@
                             <li><a class="show-1" href="#">MAKANAN & MINUMAN</a></li>
                             <li><a class="show-2" href="#">Gallery</a></li>
                             <li><a class="show-3" href="#">About</a></li>
-                            <li><a rel="nofollow" href="<?php echo base_url('index.php/Welcome/login')?>" target="_parent">LOGIN ADMIN</a></li>
+                            <li><a rel="nofollow" href="<?php echo base_url('index.php/Login/login')?>" target="_parent">LOGIN ADMIN</a></li>
                         </ul> <!-- /.menu -->
                         <a href="#" class="toggle-menu"><i class="fa fa-bars"></i></a>
                     </div> <!-- /.menu-wrapper -->
@@ -64,7 +64,7 @@
                 <div id="menu-container">
                     <div id="menu-1" class="about content">
                       <h2 style="color: white;">NO. MEJA : <input type="text">
-                      <button class="btn-lg"><a href="application/views/tabel.php">PESAN</a></button>
+                      <button class="btn-lg"></button>
                       </h2>
 
                         <div class="row">

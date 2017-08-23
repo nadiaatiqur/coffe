@@ -31,11 +31,6 @@ class Welcome extends CI_Controller {
 
 	}
 
-	public function login()
-	{
-		$this->load->view('login');
-	}
-
 		public function profil()
 	{
 		$this->load->view('profil');

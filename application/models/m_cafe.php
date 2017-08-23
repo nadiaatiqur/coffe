@@ -13,6 +13,11 @@ class M_cafe extends CI_Model {
 		$this->db->insert($table,$data);
 	}
 
+	public function cek_login($table,$where)
+	{
+		return $this->db->get($table,$where);
+	}
+
 	public function hapus_daftar($table,$where)
 	{
 		$this->db->where($where);
