@@ -27,29 +27,31 @@ class Welcome extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('utama');
+		$this->load->view('super/tampilan');
 
 	}
 
+
+
 		public function profil()
 	{
-		$this->load->view('profil');
+		$this->load->view('super/profil');
 	}
 
 		public function menu()
 	{
-		$this->load->view('menu');
+		$this->load->view('super/menu');
 	}
 
 	public function daftar_pegawai()
 	{
 		$data['pegawai'] = $this->m_cafe->pegawai('daftar_pegawai')->result();
-		$this->load->view('daftar_pegawai', $data);
+		$this->load->view('super/daftar_pegawai', $data);
 	}
 
 	public function tambah_pegawai()
 	{
-		$this->load->view('tambah_pegawai');
+		$this->load->view('super/tambah_pegawai');
 	}
 
 	public function tambah_aksi()
@@ -78,7 +80,7 @@ class Welcome extends CI_Controller {
 	{
 		$where = array('id' => $id );
 		$data['user'] = $this->m_cafe->edit_pegawai('pegawai',$where)->result();
-		$this->load->view('edit_pegawai', $data);
+		$this->load->view('super/edit_pegawai', $data);
 	}
 
 	public function update_pegawai($id)
@@ -99,12 +101,12 @@ class Welcome extends CI_Controller {
 
 		public function laporan()
 	{
-		$this->load->view('laporan');
+		$this->load->view('super/laporan');
 	}
 
 	public function grafik()
 	{
-		$this->load->view('grafik');
+		$this->load->view('super/grafik');
 	}
 
 }
