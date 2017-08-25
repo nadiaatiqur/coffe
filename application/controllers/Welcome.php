@@ -99,10 +99,18 @@ class Welcome extends CI_Controller {
 		redirect('Welcome/daftar_pegawai');
 	}
 
-		public function laporan()
+	public function laporan()
 	{
-		$this->load->view('super/laporan');
-	}
+	$data['laporan'] = $this->m_cafe->listing('menu');
+	 $this->load->view('super/laporan', $data);
+	//redirect('Welcome/laporan');
+	 }
+
+	public function export_excel(){
+	 $data = array( 'title' => 'Laporan Excel',
+	 'menu' => $this->m_cafe->listing('menu',$data));
+	 $this->load->view('Welcome/super/laporan');	}
+
 
 	public function grafik()
 	{

@@ -85,14 +85,15 @@
 					  
 					  <hr>
 					  
-				<a href="<?php echo base_url('excel/export_excel') ?>" class="btn btn-warning">
+				<a href="<?php echo base_url('index.php/Welcome/laporan') ?>" class="btn btn-warning">
 					<i class="glyphicon glyphicon-book"></i> Laporan Bulan Excel
 				</a>
 
 				<a href="#" class="btn btn-warning">
 					<i class="glyphicon glyphicon-list"></i> Laporan Bulanan PDF
 				</a>
-
+				<br><br>
+				<hr>
 				<table border="1" width="100%">
 					<thead>
 						<th>No</th>
@@ -101,12 +102,12 @@
 						<th>Harga</th>
 					</thead>
 					<tbody>
-						<?php $i=1; foreach($laporan as $user); { ?>
+						<?php $i=1; foreach($laporan as $user) { ?>
 						 <tr>
-						 <td><?php echo $no++ ; ?></td>
-						 <td><?php echo $user->Makanan ?></td>
-						 <td><?php echo $user->Minuman ?></td>
-						 <td><?php echo $user->Harga ?></td>
+						 <td><?php echo $i ; ?></td>
+						 <td><?php echo $user->makanan; ?></td>
+						 <td><?php echo $user->minuman; ?></td>
+						 <td><?php echo $user->harga; ?></td>
 						 </tr>
 						 <?php $i++; } ?>
 					</tbody>

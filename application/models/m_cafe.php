@@ -46,12 +46,9 @@ class M_cafe extends CI_Model {
 		$this->db->update($table,$data);
 	}
 
-	public function listing()
+	public function listing($table)
 	{
-		$this->db->select('*');
-		$this->db->from('menu');
-		$query = $this->db->get('');
-		return $query->result();
+		return $this->db->get($table)->result();
 	}
 
 
