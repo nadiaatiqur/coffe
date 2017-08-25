@@ -386,25 +386,35 @@
                             
                             <div class="col-md-4 col-ms-6">
                                 <div class="g-item">
-                                    <center><img src="images/gallery/g1.jpg" alt="">
+                                    <center><img src="asset/images/jam.png" alt=""><br>
                                     <h3>HOURS</h3>
-
+                                    	<p>
+                                    		SUNDAY 			: 1PM - 10PM<br>
+                                    		MONDAY-FRIDAY 	: 5PM - 9PM<br>
+                                    		SATURDAY		: 3PM - 10PM
+                                    	</p>
                                     </center>
                                 </div> <!-- /.g-item -->
                             </div> <!-- /.col-md-4 -->
                             <div class="col-md-4 col-ms-6">
                                 <div class="g-item">
-                                    <center><img src="images/gallery/g1.jpg" alt="">
+                                    <center><img src="asset/images/medsos.png" alt=""><br>
                                     <h3>STAY CONNECTED</h3>
-
+                                    	<p>
+                                    		Stay connected with us and be the first to
+                                    		learn about special menu items, events, and
+                                    		much mofe.
+                                    	</p>
                                     </center>
                                 </div> <!-- /.g-item -->
                             </div> 
                             <div class="col-md-4 col-ms-6">
                                 <div class="g-item">
-                                    <center><img src="images/gallery/g1.jpg" alt="">
+                                    <center><img src="asset/images/peta.png" alt=""><br>
                                     <h3>VISIT US</h3>
-
+                                    	<p>
+                                    		Jl. 
+                                    	</p>
                                     </center>
                                 </div> <!-- /.g-item -->
                             </div> <!--

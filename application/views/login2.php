@@ -13,38 +13,10 @@
   <div class="form">
       
       <ul class="tab-group">
-        <li class="tab"><a href="#admin">ADMIN</a></li>
         <li class="tab"><a href="#super">SUPER ADMIN</a></li>
       </ul>
       
-      <div class="tab-content">
-        <div id="admin">    
-          <h1>Daebak Cafe</h1>
-          
-          <form action="<?php echo base_url('index.php/Login/login/aksi_login'); ?>" method="post">
-          
-            <div class="field-wrap">
-            <label>
-              Username<span class="req">*</span>
-            </label>
-            <input type="text" />
-          </div>
-          
-          <div class="field-wrap">
-            <label>
-              Password<span class="req">*</span>
-            </label>
-            <input type="password" />
-          </div>
-          
-          <p class="forgot"><a href="#">Forgot Password?</a></p>
-          
-          <button class="button button-block"/>Log In</button>
-          
-          </form>
-
-        </div>
-        
+      <div class="tab">
         <div id="super">   
           <h1>Daebak Cafe</h1>
           

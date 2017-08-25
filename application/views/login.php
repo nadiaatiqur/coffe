@@ -14,10 +14,9 @@
       
       <ul class="tab-group">
         <li class="tab"><a href="#admin">ADMIN</a></li>
-        <li class="tab"><a href="#super">SUPER ADMIN</a></li>
       </ul>
       
-      <div class="tab-content">
+      <div class="tab">
         <div id="admin">    
           <h1>Daebak Cafe</h1>
           
@@ -35,33 +34,6 @@
               Password<span class="req">*</span>
             </label>
             <input type="password" />
-          </div>
-          
-          <p class="forgot"><a href="#">Forgot Password?</a></p>
-          
-          <button class="button button-block"/>Log In</button>
-          
-          </form>
-
-        </div>
-        
-        <div id="super">   
-          <h1>Daebak Cafe</h1>
-          
-          <form action="/" method="post">
-          
-            <div class="field-wrap">
-            <label>
-              Email Address<span class="req">*</span>
-            </label>
-            <input type="email"required autocomplete="off"/>
-          </div>
-          
-          <div class="field-wrap">
-            <label>
-              Password<span class="req">*</span>
-            </label>
-            <input type="password"required autocomplete="off"/>
           </div>
           
           <p class="forgot"><a href="#">Forgot Password?</a></p>
