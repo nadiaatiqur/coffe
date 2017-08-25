@@ -1,9 +1,8 @@
-<?php echo "jbj"; ?>
 <!DOCTYPE html>
 <html lang="en"><head>
         <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
         <meta charset="utf-8">
-        <title>Daebak Cafe </title>
+        <title>Daebak Cafe</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <link href="<?php echo base_url('assets/css/bootstrap.css'); ?>" rel="stylesheet">
         
@@ -61,8 +60,7 @@
 				<li><a href="<?php echo base_url('index.php/Welcome/grafik') ?>"><i class="glyphicon glyphicon-star"></i> Grafik</a></li>
 			  </ul>
 			</div><!-- /col-3 -->
-			
-				<div class="col-md-9">
+			<div class="col-md-9">
 
 			  
 				<div class="row">
@@ -70,25 +68,23 @@
 					
 				  
 					<!-- center left-->	
-				<div class="col-md-9">
+					<div class="col-md-6">
 					  
 					  <hr>
 					  
-				<a href="#" class="btn btn-warning">
-					<i class="glyphicon glyphicon-book"></i> Laporan Bulan Excel
-				</a>
-
-				<a href="#" class="btn btn-warning">
-					<i class="glyphicon glyphicon-list"></i> Laporan Bulanan PDF
-				</a>
-				</div>
+					  
+						
+						
+						  </div><!--/panel content-->
+						</div><!--/panel-->
+					  
+					</div><!--/col-span-6-->
 			 
 			  </div><!--/row-->
 			</div><!--/col-span-9-->
 		</div>
 		</div>
 		<!-- /Main -->
-
         
 		<script type="text/javascript" src="assets/js/jquery.js"></script>
         <script type="text/javascript" src="assets/js/bootstrap.js"></script>

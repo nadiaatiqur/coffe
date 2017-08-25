@@ -18,7 +18,7 @@
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('asset/css/animate.css');?>">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('asset/css/templatemo_misc.css');?>">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('asset/css/templatemo_style.css')?>">
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url('http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800') ?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'); ?>">
 
     <script src="<?php echo base_url('asset/js/vendor/modernizr-2.6.2.min.js'); ?>"></script>
 	<!-- templatemo 410 circle -->
@@ -36,7 +36,7 @@
                     
                     <div class="logo-wrapper">
                         <h1 class="logo">
-                            <a href="#"><img src="images/logo.png" alt="Circle Template">
+                            <a href=""><img src="images/logo.png" alt="Circle Template">
                             <span>HALAMAN PENGUNJUNG</span></a>
                         </h1>
                     </div> <!-- /.logo-wrapper -->

@@ -3,6 +3,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class M_cafe extends CI_Model { 
 
+	public function __construct()
+	{
+		parent::__construct();
+		$this->load->database();
+	}
+
 	public function pegawai($table)
 		{
 			return $this->db->get('pegawai');
@@ -38,6 +44,11 @@ class M_cafe extends CI_Model {
 	{
 		$this->db->where($where);
 		$this->db->update($table,$data);
+	}
+
+	public function listing($table)
+	{
+		return $this->db->get($table)->result();
 	}
 
 

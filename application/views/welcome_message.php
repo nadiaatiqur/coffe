@@ -7,7 +7,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<title>Welcome to CodeIgniter</title>
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/admin.css'); ?>">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/bootstrap.css') ; ?>">
-	 <link rel="stylesheet" type="text/css" href="<?php echo base_url('asset/css/bootstrap.min.css'); ?> ">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('asset/css/bootstrap.min.css'); ?> ">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('asset/css/normalize.min.css'); ?> ">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('asset/css/font-awesome.min.css') ;?> ">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('asset/css/animate.css');?>">
@@ -15,9 +15,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('asset/css/templatemo_style.css')?>">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800') ?>">
 
+    <script src="<?php echo base_url('asset/js/vendor/modernizr-2.6.2.min.js'); ?>"></script>
 	<script src="<?php echo base_url('assets/js/bootstrap.js'); ?>"></script>
 	<script src="<?php echo base_url('assets/js/jquery.js'); ?>"></script>
-	<script src="<?php echo base_url('asset/js/vendor/modernizr-2.6.2.min.js'); ?>"></script>
+	
 
 	<style type="text/css">
 

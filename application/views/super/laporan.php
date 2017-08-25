@@ -1,9 +1,8 @@
-<?php echo "jbj"; ?>
 <!DOCTYPE html>
 <html lang="en"><head>
         <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
         <meta charset="utf-8">
-        <title>Daebak Cafe</title>
+        <title>Daebak Cafe </title>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <link href="<?php echo base_url('assets/css/bootstrap.css'); ?>" rel="stylesheet">
         
@@ -12,6 +11,18 @@
         <![endif]-->
         
         <link href=" <?php echo base_url('assets/css/admin.css'); ?>" rel="stylesheet">
+
+<style type="text/css">
+		 }
+		 table {
+		 border-top: solid thin #000;
+		 border-collapse: collapse;
+		 }
+		 th, td {
+		 border-top: border-top: solid thin #000;
+		 padding: 6px 12px;
+		 }
+ </style>
     </head>
     
     <body>
@@ -61,7 +72,8 @@
 				<li><a href="<?php echo base_url('index.php/Welcome/grafik') ?>"><i class="glyphicon glyphicon-star"></i> Grafik</a></li>
 			  </ul>
 			</div><!-- /col-3 -->
-			<div class="col-md-9">
+			
+				<div class="col-md-9">
 
 			  
 				<div class="row">
@@ -69,23 +81,45 @@
 					
 				  
 					<!-- center left-->	
-					<div class="col-md-6">
+				<div class="col-md-9">
 					  
 					  <hr>
 					  
-					  
-						
-						
-						  </div><!--/panel content-->
-						</div><!--/panel-->
-					  
-					</div><!--/col-span-6-->
+				<a href="<?php echo base_url('index.php/Welcome/laporan') ?>" class="btn btn-warning">
+					<i class="glyphicon glyphicon-book"></i> Laporan Bulan Excel
+				</a>
+
+				<a href="#" class="btn btn-warning">
+					<i class="glyphicon glyphicon-list"></i> Laporan Bulanan PDF
+				</a>
+				<br><br>
+				<hr>
+				<table border="1" width="100%">
+					<thead>
+						<th>No</th>
+						<th>Makanan</th>
+						<th>Minuman</th>
+						<th>Harga</th>
+					</thead>
+					<tbody>
+						<?php $i=1; foreach($laporan as $user) { ?>
+						 <tr>
+						 <td><?php echo $i ; ?></td>
+						 <td><?php echo $user->makanan; ?></td>
+						 <td><?php echo $user->minuman; ?></td>
+						 <td><?php echo $user->harga; ?></td>
+						 </tr>
+						 <?php $i++; } ?>
+					</tbody>
+				</table>
+				</div>
 			 
 			  </div><!--/row-->
 			</div><!--/col-span-9-->
 		</div>
 		</div>
 		<!-- /Main -->
+
         
 		<script type="text/javascript" src="assets/js/jquery.js"></script>
         <script type="text/javascript" src="assets/js/bootstrap.js"></script>
