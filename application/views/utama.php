@@ -376,11 +376,39 @@
                     <div id="menu-3" class="about">
                         <div class="row">
                         	
-                            <div class="col-md-12">
+                            <div class="row-md-12">
                                 <div class="toggle-content text-center spacing">
                                     <h3>ABOUT US</h3>
                                     
                                 </div>
+                            </div>
+                           <div class="row">
+                            
+                            <div class="col-md-4 col-ms-6">
+                                <div class="g-item">
+                                    <center><img src="images/gallery/g1.jpg" alt="">
+                                    <h3>HOURS</h3>
+
+                                    </center>
+                                </div> <!-- /.g-item -->
+                            </div> <!-- /.col-md-4 -->
+                            <div class="col-md-4 col-ms-6">
+                                <div class="g-item">
+                                    <center><img src="images/gallery/g1.jpg" alt="">
+                                    <h3>STAY CONNECTED</h3>
+
+                                    </center>
+                                </div> <!-- /.g-item -->
+                            </div> 
+                            <div class="col-md-4 col-ms-6">
+                                <div class="g-item">
+                                    <center><img src="images/gallery/g1.jpg" alt="">
+                                    <h3>VISIT US</h3>
+
+                                    </center>
+                                </div> <!-- /.g-item -->
+                            </div> <!--
+                            
                             </div> <!-- /.col-md-12 -->
                         </div> <!-- /.row -->
                     </div> <!-- /.contact -->
