@@ -85,12 +85,18 @@
 					  
 					  <hr>
 					  
-				<a href="<?php echo base_url('index.php/Welcome/laporan') ?>" class="btn btn-warning">
-					<i class="glyphicon glyphicon-book"></i> Laporan Bulan Excel
+				<a href="#" class="btn btn-info">
+					<i class="glyphicon glyphicon-book"></i> Import Excel
+				</a>
+				<a href="#" class="btn btn-info">
+					<i class="glyphicon glyphicon-book"></i> Import PDF
 				</a>
 
 				<a href="#" class="btn btn-warning">
-					<i class="glyphicon glyphicon-list"></i> Laporan Bulanan PDF
+					<i class="glyphicon glyphicon-list"></i> Export Excel
+				</a>
+				<a href="#" class="btn btn-warning">
+					<i class="glyphicon glyphicon-list"></i> Export PDF
 				</a>
 				<br><br>
 				<hr>
