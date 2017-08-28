@@ -40,8 +40,9 @@ class Welcome extends CI_Controller {
 
 		public function menu()
 	{
-		$this->load->view('super/menu');
+		$this->load->view('menu');
 	}
+
 
 	public function daftar_pegawai()
 	{
