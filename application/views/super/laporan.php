@@ -83,19 +83,26 @@
 					<!-- center left-->	
 				<div class="col-md-9">
 					  
-					  <hr>
 					  
-				<a href="#" class="btn btn-info">
-					<i class="glyphicon glyphicon-book"></i> Import Excel
-				</a>
-				<a href="#" class="btn btn-info">
-					<i class="glyphicon glyphicon-book"></i> Import PDF
+					  <h4 align="center">Sebelum mengupload, pastikan file anda berformat .xls/.xlsx</h4>
+					  <label class="custom-file">
+				  <input type="file" id="file" class="form-control">
+				  <span class="custom-file-control"></span>
+				  		 </label>
+				<a href="#" class="btn btn-default">Go!</a>
+				<a href="#" class="btn btn-primary">
+					<i class="glyphicon glyphicon-book"></i> Export Excel
 				</a>
 
-				<a href="#" class="btn btn-warning">
-					<i class="glyphicon glyphicon-list"></i> Export Excel
-				</a>
-				<a href="#" class="btn btn-warning">
+				<div class="row"></div><br><hr>
+
+				<h4 align="center">Sebelum mengupload, pastikan file anda berformat .pdf</h4>
+				<label class="custom-file">
+				  <input type="file" id="file" class="form-control">
+				  <span class="custom-file-control"></span>
+				</label>
+				<a href="#" class="btn btn-default">Go!</a>
+				<a href="#" class="btn btn-info">
 					<i class="glyphicon glyphicon-list"></i> Export PDF
 				</a>
 				<br><br>

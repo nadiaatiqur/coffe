@@ -73,7 +73,7 @@
 					  <hr>
 					  
 					  <div class="btn-group btn-group-justified" >
-						<a href="#" class="btn btn-primary col-sm-3">
+						<a href="<?php echo base_url('index.php/Welcome/menu'); ?>" class="btn btn-primary col-sm-3">
 						  <i class="glyphicon glyphicon-cutlery"></i><br>
 						  Makanan
 						</a>

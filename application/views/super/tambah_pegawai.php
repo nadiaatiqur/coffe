@@ -73,7 +73,7 @@
 						<div class="panel panel-default">
 							<div class="panel-heading">
 								<div class="panel-title">
-								<h4>Post Request</h4>
+								<h4>Tambah Pegawai</h4>
 								</div>
 							</div>
 							<div class="panel-body">
@@ -100,18 +100,12 @@
 								  </div>
 								</div> 
 								  </div>
-								</div>    
-								<div class="row"></div>
-								<div class="col-md-8">
-								<div class="control-group">
-									<label></label>
-									<div class="controls">
+								</div>
+									<div class="col-md-1">
+									</div>
 									<button type="submit" class="btn btn-primary">
 									  Post
-									</button><br><br>
-									</div>
-									</div>
-								</div> 
+									</button> 
 								</form>  
 						
 						  </div><!--/panel content-->

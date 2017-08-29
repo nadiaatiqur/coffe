@@ -19,11 +19,6 @@ class M_cafe extends CI_Model {
 		$this->db->insert($table,$data);
 	}
 
-	public function cek_login($table,$where)
-	{
-		return $this->db->get($table,$where);
-	}
-
 	public function hapus_daftar($table,$where)
 	{
 		$this->db->where($where);
@@ -49,6 +44,16 @@ class M_cafe extends CI_Model {
 	public function listing($table)
 	{
 		return $this->db->get($table)->result();
+	}
+
+	public function menu($table)
+		{
+			return $this->db->get('menu');
+		}
+
+	public function input_menu($table,$data)
+	{
+		$this->db->insert($table,$data);
 	}
 
 

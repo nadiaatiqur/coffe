@@ -67,115 +67,7 @@
 				   
 					  <hr>              
 		   
-					</div><!--/col-->
-					  
-				<!--<table border=0 class=datatable width=800px cellpadding=0 cellspacing=0 align=center>
-		<tr>
-			<td align=center><b><h3>Menu</h3></b></td>
-		</tr>
-
-		
-		<tr valign=top>
-			<td>
-				<table class=table border=1 width=100%>
-					<tr class=th>
-						<th>Menu</th>
-						<th width=150px>Harga (Rp)</th>
-						<th width=200px>Setting</th>
-					</tr>
-				</table>
-			</td>
-		</tr>
-		`
-						</table>
-
-								<table border="1" class="table table-bordered">
-									<thead>
-										<tr class="danger">
-											<td>No</td>
-											<td>Id</td>
-											<td>Nama</td>
-											<td>Alamat</td>
-											<td>Status</td>
-										</tr>
-									</thead>
-									<tbody>
-
-
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Simple CRUD by TUTORIALWEB.NET</title>
-</head>
-<body>
-	<h2>Simple CRUD</h2>
-	
-	<p><a href="index.php">Beranda</a> / <a href="tambah.php">Tambah Data</a></p>
-	
-	<h3>Tambah Data Siswa</h3>
-	
-	<form action="tambah-proses.php" method="post">
-		<table cellpadding="3" cellspacing="0">
-			
-			<th>
-				<td>Menu</td>
-				<td>:</td>
-				<td><input type="text" name="menu" size="30" required></td>
-			</th>
-			<th>
-				<td>Harga</td>
-				<td>:</td>
-				<td><input type="text" name="menu" size="30" required></td>
-			</th>
-			
-			<th>
-				<td>&nbsp;</td>
-				<td></td>
-				<td><input type="submit" name="tambah" value="Tambah"></td>
-			</th>
-		</table>
-	</form>
-</body>
-</html>
-
-
-<html>
-<head>
-	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-	<script type="text/javascript" src="http://code.jQuery.com/jQuery-1.7.2.min.js"></script>
-	<script type="text/javascript" src="functions.js"></script>
-</head>
-<body>
-	<form id="frmCadastre">
-		<ul>
-			<li>
-				<label for="txtID">ID:</label>
-				<input type="text" id="txtID"/>
-			</li>
-			<li>
-				<label for="txtName">Name:</label>
-				<input type="text" id="txtName"/>
-			</li>
-			<li>
-				<label for="txtPhone">Phone:</label>
-				<input type="text" id="txtPhone"/>
-			</li>
-			<li>
-				<label for="txtEmail">Email:</label>
-				<input type="text" id="txtEmail"/>
-			</li>
-			<li>
-				<input type="submit" value="Save" id="btnSave"/>
-			</li>
-		</ul>
-	</form>
-
-	<table id="tblList">
-
-	</table>
-</body>
-</html>-->
-
+					</div>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -192,36 +84,38 @@
             </div>
             <div class="row">
                 <p>
-                	<a href="data/add" class="btn btn-danger">Tambah Menu</a>
-                    <!--<a href="create.php" class="btn btn-success">Create</a>-->
+                	<a href="<?php echo base_url('index.php/Welcome/menu_tambah'); ?>" class="btn btn-danger">Tambah Menu</a>
                 </p>
                  <div class="col-md-8">
+
                 <table border="1" class="table table-striped table-bordered">
                       <thead>
                      	<tr>
                      	  <th width=25px>No.</th>
                      	  <th width=100px>Foto</th>
                           <th >Menu</th>
-                          <th width=100px>Harga</th>
+                          <th width=70px>Harga</th>
+                          <th width="50px">Gambar</th>
                           <th width=123px>Aksi</th>
-                        </tr>
-                        <tr>
-                        	<th></th>
-                        	<th></th>
-                        	<th></th>
-                        	<th></th>
-                        	<th> &nbsp
-                        	<a href="#" class="btn btn-success">
-                      			<i class="glyphicon glyphicon-pencil"></i>
-                      			</a>
-                      		<a href="#" class="btn btn-primary">
-                      				<i class="glyphicon glyphicon-trash"></i>
-                      			</a>
-                      		</th>
                         </tr>
                       </thead>
                       <tbody>
-                      		  
+                      		<?php
+								$i=1;
+								foreach ($menu as $m) {
+							?> 
+							<tr>
+								<td><?php echo $i;  ?></td>
+								<td><?php echo $m->makanan ; ?></td>
+								<td><?php echo $m->minuman ; ?></td>
+								<td><?php echo $m->harga ; ?></td>
+								<td><?php echo $m->gambar ; ?></td>
+							<td>
+								<a href="<?php echo base_url('index.php/Welcome/edit_menu/'.$m->id) ; ?>" class="btn btn-primary"><i class="glyphicon glyphicon-pencil"></i></a>
+								<a href="<?php echo base_url('index.php/Welcome/hapus_menu/'.$m->id) ; ?>" class="btn btn-danger"><i class="glyphicon glyphicon-trash"></i></a>
+							</td>
+							</tr>
+							<?php $i++; } ?>
                       </tbody>
                 </table>
                 </div>

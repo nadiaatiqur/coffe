@@ -40,9 +40,31 @@ class Welcome extends CI_Controller {
 
 		public function menu()
 	{
-		$this->load->view('menu');
+		$data['menu'] = $this->m_cafe->menu('menu_tambah')->result();
+		$this->load->view('menu',$data);
 	}
 
+	public function menu_tambah()
+	{
+		$this->load->view('menu_tambah');
+	}
+
+	public function aksi_tambah()
+	{
+		$Makanan = $this->input->post('Makanan');
+		$Minuman = $this->input->post('Minuman');
+		$Harga = $this->input->post('Harga');
+		$Gambar = $this->input->post('Gambar');
+
+		$data = array
+		(	'makanan' => $Makanan,
+			'minuman' => $Minuman,
+			'harga' => $Harga,
+			'gambar' => $Gambar );
+
+		$this->m_cafe->input_menu('menu',$data);
+		redirect('Welcome/menu');
+	}
 
 	public function daftar_pegawai()
 	{

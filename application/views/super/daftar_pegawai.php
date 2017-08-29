@@ -77,7 +77,8 @@
 							</div>
 							<div class="panel-body">
 
-							<a href="<?php echo base_url('index.php/Welcome/tambah_pegawai') ; ?>" class="btn btn-primary"><center>Tambah Pegawai</center></a>   
+			<a href="<?php echo base_url('index.php/Welcome/tambah_pegawai') ; ?>" class="btn btn-primary">
+			<center>Tambah Pegawai</center></a>   
 							<br><br>
 								<div class="row-md-6">
 								<table border="1" class="table table-bordered">

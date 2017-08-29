@@ -16,6 +16,14 @@ footer {
   padding-bottom:20px;
   background-color:black;
 }
+ul.tabs {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+    display: block;
+}
+
 
 /* count indicator near icons */
 .nav>li .count {
