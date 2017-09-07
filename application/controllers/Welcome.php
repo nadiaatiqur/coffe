@@ -88,17 +88,17 @@ class Welcome extends CI_Controller {
 
 	public function produk()
 	{
-		$this->load->view('produk');
+		$this->load->view('profil/produk');
 	}
 
 	public function testimoni()
 	{
-		$this->load->view('testimoni');
+		$this->load->view('profil/testimoni');
 
 	}
 	public function detail()
 	{
-		$this->load->view('detail');
+		$this->load->view('profil/detail');
 
 	}
 
