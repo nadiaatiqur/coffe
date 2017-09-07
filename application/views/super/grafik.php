@@ -84,15 +84,25 @@
     		<!--<script src="js/bootstrap.min.js"></script>-->
     </head>
     <body>
+    <div id="report"></div>
         <div width: 0px margin: 0px auto>
             <canvas id="myChart" width="0" height="0"></canvas>
         </div>
+        <?php
+    /* Mengambil query report*/
+    foreach($grap as $data){
+        $bulan[] = $data->bulan; //ambil bulan
+        $value[] = (float) $data->nilai; //ambil nilai
+    }
+    /* end mengambil query*/
+     
+?>
         <script>
             var ctx = document.getElementById("myChart");
             var myChart = new Chart(ctx, {
                 type: 'bar',
                 data: {
-                    labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+                    labels: ["Januari", "Februari", "Maret", "April", "Mei", "Juni","Juli","Agustus","September","Oktober","November","Desember"],
                     datasets: [{
                             label: '# of Votes',
                             data: [12, 19, 3, 5, 2, 3],
@@ -115,11 +125,7 @@
                             borderWidth: 1
                         }]
                 },
-                options: {
-                    scales: {
-                        yAxes: [{
-                                ticks: {
-                                    beginAtZero: true
+                
                                 }
                             }]
                     }

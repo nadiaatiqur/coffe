@@ -255,12 +255,21 @@ class Welcome extends CI_Controller {
 	public function export_excel(){
 	 $data = array( 'title' => 'Laporan Excel',
 	 'menu' => $this->m_cafe->listing('menu',$data));
-	 $this->load->view('Welcome/super/laporan');	}
-
+	 $this->load->view('Welcome/super/laporan');	
+	}
 
 	public function grafik()
 	{
-		$this->load->view('super/grafik');
+		$data['grap'] = $this->m_cafe->grafik();
+
+		$this->load->view('super/grafik',$data);
+	}
+
+	public function pdf()
+	{
+		$data = array( 'title' => 'Laporan PDF',
+	 'tabel_pesan' => $this->m_cafe->pdf('tabel_pesan'));
+	 $this->load->view('super/laporan');
 	}
 
 }

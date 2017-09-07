@@ -95,7 +95,7 @@
 				</a>
 
 				<div class="row"></div><br><hr>
-				<a href="<?php echo base_url('index.php/Pdf/generate_to_pdf'); ?>" class="btn btn-info">
+				<a href="<?php echo base_url('index.php/Welcome/pdf'); ?>" class="btn btn-info">
 					<i class="glyphicon glyphicon-list"></i> Download Laporan PDF
 				</a>
 				<br><br>
@@ -106,22 +106,21 @@
 						<th>Makanan</th>
 						<th>Minuman</th>
 						<th>Harga</th>
-						<th>Gambar</th>
+						<th>Jumlah Pesanan</th>
 					</thead>
 					<tbody>
-						<?php $i=1; foreach($laporan as $user) { ?>
+						<?php $i=1; foreach($pesan as $user) { ?>
 						 <tr>
 						 <td><?php echo $i ; ?></td>
-						 <td><?php echo $user->makanan; ?></td>
-						 <td><?php echo $user->minuman; ?></td>
+						 <td><?php echo $user->makan; ?></td>
+						 <td><?php echo $user->minum; ?></td>
 						 <td><?php echo $user->harga; ?></td>
-						 <td><?php echo $user->gambar; ?></td>
+						 <td><?php echo $user->Jumlah_pesanan; ?></td>
 						 </tr>
 						 <?php $i++; } ?>
 					</tbody>
 				</table>
 				</div>
-			 <div class="end"></div>
 			  </div><!--/row-->
 			</div><!--/col-span-9-->
 		</div>
