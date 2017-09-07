@@ -18,16 +18,10 @@
           <form action="<?php echo base_url('Welcome/aksi_login2'); ?>" method="post">
           
             <div class="field-wrap">
-            <label>
-              Username
-            </label>
             <input type="text" name="username" />
           </div>
           
           <div class="field-wrap">
-            <label>
-              Password
-            </label>
             <input type="password" name="password" />
           </div>
           
