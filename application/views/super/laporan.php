@@ -81,29 +81,22 @@
 					
 				  
 					<!-- center left-->	
-				<div class="col-md-9">
-					  
-					  
-					  <h4 align="center">Sebelum mengupload, pastikan file anda berformat .xls/.xlsx</h4>
-					  <label class="custom-file">
-				  <input type="file" id="file" class="form-control">
-				  <span class="custom-file-control"></span>
-				  		 </label>
-				<a href="#" class="btn btn-default">Go!</a>
-				<a href="#" class="btn btn-primary">
+				<div class="col-md-9" id="content">
+					  <?php echo form_open_multipart('Php_excel/do_upload') ; ?>
+					<h4 align="center">Sebelum mengupload, pastikan file anda berformat .xls/.xlsx</h4>
+					<label class="custom-file">
+					  <input type="file" id="file" name="file" class="form-control" value="upload">
+					  <span class="custom-file-control"></span>
+				  	</label>
+				<button type="submit" class="btn btn-default">Go!</button>
+				</form>
+				<a href="<?php echo base_url('index.php/Php_excel/download/'); ?>" class="btn btn-primary">
 					<i class="glyphicon glyphicon-book"></i> Export Excel
 				</a>
 
 				<div class="row"></div><br><hr>
-
-				<h4 align="center">Sebelum mengupload, pastikan file anda berformat .pdf</h4>
-				<label class="custom-file">
-				  <input type="file" id="file" class="form-control">
-				  <span class="custom-file-control"></span>
-				</label>
-				<a href="#" class="btn btn-default">Go!</a>
-				<a href="#" class="btn btn-info">
-					<i class="glyphicon glyphicon-list"></i> Export PDF
+				<a href="<?php echo base_url('index.php/Pdf/generate_to_pdf'); ?>" class="btn btn-info">
+					<i class="glyphicon glyphicon-list"></i> Download Laporan PDF
 				</a>
 				<br><br>
 				<hr>
@@ -113,6 +106,7 @@
 						<th>Makanan</th>
 						<th>Minuman</th>
 						<th>Harga</th>
+						<th>Gambar</th>
 					</thead>
 					<tbody>
 						<?php $i=1; foreach($laporan as $user) { ?>
@@ -121,12 +115,13 @@
 						 <td><?php echo $user->makanan; ?></td>
 						 <td><?php echo $user->minuman; ?></td>
 						 <td><?php echo $user->harga; ?></td>
+						 <td><?php echo $user->gambar; ?></td>
 						 </tr>
 						 <?php $i++; } ?>
 					</tbody>
 				</table>
 				</div>
-			 
+			 <div class="end"></div>
 			  </div><!--/row-->
 			</div><!--/col-span-9-->
 		</div>

@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en"><head>
         <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
         <meta charset="utf-8">
-        <title>Daebak Cafe</title>
+        <title>Admin Theme Demo</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <link href="<?php echo base_url('assets/css/bootstrap.css'); ?>" rel="stylesheet">
         
@@ -10,7 +10,7 @@
           <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
         
-        <link href=" <?php echo base_url('assets/css/admin.css'); ?>" rel="stylesheet">
+        <link href="<?php echo base_url('assets/css/admin.css'); ?>" rel="stylesheet">
     </head>
     
     <body>
@@ -47,7 +47,7 @@
 
 			  <hr>
 			  
-			  <a href="#"><strong><i class="glyphicon glyphicon-link"></i> Menu Utama</strong></a>  
+			  <a href="#"><strong><i class="glyphicon glyphicon-link"></i> Resources</strong></a>  
 			  
 			  <hr>
 			  
@@ -62,68 +62,76 @@
 			</div><!-- /col-3 -->
 			<div class="col-md-9">
 
-			  
-				<div class="row">
-				   
-					
-				  
-					<!-- center left-->	
-					<div class="col-md-6">
+				<div class="row">          
+		   
+					</div>
+					<div class="row">           
+		   
+					</div><!--/col-->
+					<?php foreach ($menu as $m ) { ?>
+<form action="<?php echo base_url('index.php/Welcome/update_menu').$m->id ;?>" method="post">
 					  
-					  <hr>
-					  
-					  <div class="col-md-8">
-                <table border="1" class="table table-striped table-bordered">
-                      <thead>
-			
-				<tr>
-					<td align=center width=180px><b>Foto</b></td>
-					<td align=center colspan=2><b>Profil</b></td>
-				</tr>
-				<tr>
-					<td align=center><img src=<?php echo base_url('asset/images/111220.jpg') ?> width=150px height=170px></td>
-					<td><!--<td valign=top>-->
-					<table border=0 class=datatable width=350px cellpadding=10 cellspacing=10 align=center>
-						
-							<tr>
-								<td width=100px><b>Nama</b></td>
-								<td width=1%>:</td>
-								<td>Abdul Sehun</td>							
-							</tr>
-							<tr>
-								<td><b>Umur</b></td>
-								<td>:</td>
-								<td>23 Tahun</td>
-							</tr>
-							<tr>
-								<td><b>Lahir</b></td>
-								<td>:</td>
-								<td>12 April 1994</td>
-							</tr>
-							<tr>
-								<td><b>Alamat</b></td>
-								<td>:</td>
-								<td>Korea Selatan</td>
-							</tr>
-							
-							</thead>						
-						</table>
-						</td>
-						</tr>
-						</div>
-						</div>
-						
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<div class="panel-title">
+								<h4>Edit Menu Cafe</h4>
+								</div>
+							</div>
+							<div class="panel-body">
+
+							  <form class="form form-vertical">
+							   <div class="col-md-6">
+							   <div class="control-group">
+								  <label>Makanan</label>
+								  <div class="controls">
+	 <input class="form-control" placeholder="Masukkan Nama" type="text" name="Makanan" value="<?php echo $m->makanan; ?>">
+								  </div>
+								</div> 
+								    <div class="control-group">
+								  <label>Minuman</label>
+								  <div class="controls">
+	<input class="form-control" placeholder="Masukkan Nama" type="text" name="Minuman" value="<?php echo $m->minuman; ?>">
+								  </div>
+								</div>
+								<div class="control-group">
+								  <label>Harga</label>
+								  <div class="controls">
+	<input class="form-control" placeholder="Masukkan Harga" type="text" name="Harga" value="<?php echo $m->harga; ?>">
+								  </div>
+								</div>
+								<div class="control-group">
+								  <label>Masukkan Gambar</label>
+								  <div class="controls">
+									<input class="form-control" type="file" name="Gambar" value="<?php echo $m->gambar; ?>">
+								  </div>
+								</div> 
+								  </div>
+								</div>    
+								<div class="row"></div>
+								<div class="col-md-8">
+								<div class="control-group">
+									<label></label>
+									<div class="controls">
+									<button type="submit" class="btn btn-primary">
+									  Post
+									</button><br><br>
+									</div>
+									</div>
+								</div> 
+								<?php } ?>
+								</form>  
 						
 						  </div><!--/panel content-->
 						</div><!--/panel-->
-					  
-					</div><!--/col-span-6-->
 			 
 			  </div><!--/row-->
 			</div><!--/col-span-9-->
 		</div>
 		</div>
+		</div>
 		<!-- /Main -->
+
+		
         
 		<script type="text/javascript" src="assets/js/jquery.js"></script>
         <script type="text/javascript" src="assets/js/bootstrap.js"></script>
