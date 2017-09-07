@@ -55,7 +55,6 @@
 			            		<ul class="nav">
 			              			<li class="active"><a href=" <?php echo base_url('Welcome/index'); ?>">Home</a></li>
 			              			<li><a href="<?php echo base_url('Welcome/produk'); ?> ">Produk Kami</a></li>
-									<li><a href="<?php echo base_url('Welcome/testimoni'); ?> ">Galeri</a></li>
                                     <li><a href="<?php echo base_url('Welcome/detail'); ?>">Keranjang</a></li>
 			              			<li class="dropdown">
 			                			<a href="#" class="dropdown-toggle" data-toggle="dropdown">Login <b class="caret"></b></a>
@@ -105,7 +104,7 @@
 		<!--start: Container -->
     	<div class="container"> 
         <div class="col-md-8 col-sm-12">
-                <form action="<?php echo base_url().'welcome/pesan_aksi'; ?>" method="post">
+                <form action="<?php echo base_url('index.php/Welcome/pesan_aksi'); ?>" method="post">
                 <div id="menu-container">
                         <div class="row">
                             <div class="col-md-12 col-sm-12">
