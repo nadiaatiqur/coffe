@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 23, 2017 at 06:17 AM
+-- Generation Time: Sep 07, 2017 at 06:15 AM
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 7.0.8
 
@@ -31,6 +31,32 @@ CREATE TABLE `login` (
   `password` varchar(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `login`
+--
+
+INSERT INTO `login` (`username`, `password`) VALUES
+('admin', 'password');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `login2`
+--
+
+CREATE TABLE `login2` (
+  `id` int(50) NOT NULL,
+  `username` varchar(50) NOT NULL,
+  `password` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `login2`
+--
+
+INSERT INTO `login2` (`id`, `username`, `password`) VALUES
+(1, 'super', 'password');
+
 -- --------------------------------------------------------
 
 --
@@ -53,6 +79,19 @@ INSERT INTO `pegawai` (`id`, `name`, `address`, `TTL`) VALUES
 (1238, 'bella', 'selok gondang', '0000-00-00'),
 (1241, 'ratna', 'bondoyudo', '2000-02-01');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tabel_pesan`
+--
+
+CREATE TABLE `tabel_pesan` (
+  `id_tabel` int(50) NOT NULL,
+  `makan_minum` varchar(50) NOT NULL,
+  `jumlah_pesanan` varchar(50) NOT NULL,
+  `harga_menu` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
 --
 -- Indexes for dumped tables
 --
@@ -64,6 +103,12 @@ ALTER TABLE `pegawai`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `tabel_pesan`
+--
+ALTER TABLE `tabel_pesan`
+  ADD PRIMARY KEY (`id_tabel`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -72,6 +117,11 @@ ALTER TABLE `pegawai`
 --
 ALTER TABLE `pegawai`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1242;
+--
+-- AUTO_INCREMENT for table `tabel_pesan`
+--
+ALTER TABLE `tabel_pesan`
+  MODIFY `id_tabel` int(50) NOT NULL AUTO_INCREMENT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
