@@ -70,11 +70,6 @@ class M_cafe extends CI_Model {
 		$this->db->insert($table,$data);
 	}
 
-	public function input_pesan($table,$data)
-	{
-		$this->db->insert($table,$data);
-	}
-
 	public function hapus_menu($table,$where)
 	{
 		$this->db->where($where);
@@ -94,7 +89,17 @@ class M_cafe extends CI_Model {
 	public function update_menucafe($table,$where,$data)
 	{
 		$this->db->where($where);
-		$this->db->update($table,$data);
+		$this->db->update($Otable,$data);
+	}
+
+	public function tampil_pesan($table)
+	{
+		return $this->db->get('tabel_pesan');
+	}
+	
+	public function input_pesan($table,$data)
+	{
+		$this->db->insert($table,$data);
 	}
 
 	public function grafik()

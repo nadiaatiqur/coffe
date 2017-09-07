@@ -91,11 +91,7 @@ class Welcome extends CI_Controller {
 		$this->load->view('profil/produk');
 	}
 
-	public function testimoni()
-	{
-		$this->load->view('profil/testimoni');
-
-	}
+	
 	public function detail()
 	{
 		$this->load->view('profil/detail');
@@ -109,19 +105,26 @@ class Welcome extends CI_Controller {
 
 	public function pesan()
 	{
+		$this->m_cafe->tampil_pesan('tabel_pesan',$data);
+		$this->load->view('profil/detail',$data);
+	}
+
+	public function tambah_pesan()
+	{
 		$this->load->view('profil/produk');
 	}
+
 	public function pesan_aksi()
 	{
-		$makan = $this->input->post('makan_minum');
-		$minum = $this->input->post('makan_minum');
-		$harga = $this->input->post('harga_menu');
-		$jumlah = $this->input->post('jumlah_pesanan');
+		$makan = $this->input->post('makan');
+		$minum = $this->input->post('minum');
+		$harga = $this->input->post('harga');
+		$jumlah = $this->input->post('jumlah');
 
 		$data = array 
 		(
-			'makan_minum'  => $makan,
-			'makan_minum' => $minum,
+			'makan'  => $makan,
+			'minum' => $minum,
 			'harga_menu' => $harga,
 			'jumlah_pesanan' => $jumlah
 			);
