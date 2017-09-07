@@ -72,7 +72,45 @@
 					  
 					  <hr>
 					  
-					  
+					  <div class="col-md-8">
+                <table border="1" class="table table-striped table-bordered">
+                      <thead>
+			
+				<tr>
+					<td align=center width=180px><b>Foto</b></td>
+					<td align=center colspan=2><b>Profil</b></td>
+				</tr>
+				<tr>
+					<td align=center><img src=<?php echo base_url('asset/images/111220.jpg') ?> width=150px height=170px></td>
+					<td><!--<td valign=top>-->
+					<table border=0 class=datatable cellpadding=25 cellspacing=25 align=center>
+						
+							<tr>
+								<td width=100px><b>Nama</b></td>
+								<td width=1%>:</td>
+								<td>Abdul Sehun</td>							
+							</tr>
+							<tr>
+								<td><b>Umur</b></td>
+								<td>:</td>
+								<td>23 Tahun</td>
+							</tr>
+							<tr>
+								<td><b>Lahir</b></td>
+								<td>:</td>
+								<td>12 April 1994</td>
+							</tr>
+							<tr>
+								<td><b>Alamat</b></td>
+								<td>:</td>
+								<td>Korea Selatan</td>
+							</tr>
+							</thead>						
+						</table>
+						</td>
+						</tr>
+						</div>
+						</div>
 						
 						
 						  </div><!--/panel content-->
