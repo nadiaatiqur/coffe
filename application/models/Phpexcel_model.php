@@ -3,9 +3,23 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Phpexcel_model extends CI_Model {
 
+    public function __construct()
+    {
+        parent::__construct();
+        $this->load->database();
+    }
+
+    public function ekspor()
+    {
+        $this->db->select('*');
+        $this->db->from('menu');
+        $query = $this->db->get();
+        return $query->result();
+    }
+
 	 public function upload_data($filename){
         ini_set('memory_limit', '-1');
-        $inputFileName = './assets/uploads/'.$filename;
+        $inputFileName = './asset/images/'.$filename;
         try {
         $objPHPExcel = PHPExcel_IOFactory::load($inputFileName);
         } catch(Exception $e) {
@@ -15,15 +29,13 @@ class Phpexcel_model extends CI_Model {
         $worksheet = $objPHPExcel->getActiveSheet()->toArray(null,true,true,true);
         $numRows = count($worksheet);
  
-        for ($i=1; $i < ($numRows+1) ; $i++) { 
-            $tgl_asli = str_replace('/', '-', $worksheet[$i]['B']);
-            $exp_tgl_asli = explode('-', $tgl_asli);
-            $exp_tahun = explode(' ', $exp_tgl_asli[2]);
-            $tgl_sql = $exp_tahun[0].'-'.$exp_tgl_asli[0].'-'.$exp_tgl_asli[1].' '.$exp_tahun[1];
+        for ($i=2; $i < ($numRows+1) ; $i++) { 
  
-            $ins = array(
-                    "makanan"          => $worksheet[$i]["A"],
-                    "harga"   => $tgl_sql
+            $ins = array (
+                    "id"        => $worksheet[$i]["A"],
+                    "makanan"   => $worksheet[$i]["B"],
+                    "minuman"   => $worksheet[$i]["C"],
+                    "harga"     => $worksheet[$i]["D"],
                    );
  
             $this->db->insert('menu', $ins);

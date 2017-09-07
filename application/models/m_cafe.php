@@ -65,11 +65,35 @@ class M_cafe extends CI_Model {
 		$this->db->insert($table,$data);
 	}
 
+<<<<<<< HEAD
 	public function input_pesan($table,$data)
 	{
 		$this->db->insert($table,$data);
 	}
 
+=======
+	public function hapus_menu($table,$where)
+	{
+		$this->db->where($where);
+		$this->db->delete($table);
+	}
+
+	public function edit_menu($table,$where)
+	{
+		return $this->db->get_where($table,$where);
+	}
+
+	public function update_menu()
+	{
+		return $this->db->get('menu');
+	}
+
+	public function update_menucafe($table,$where,$data)
+	{
+		$this->db->where($where);
+		$this->db->update($table,$data);
+	}
+>>>>>>> d805ad46e00cbccefd7fba1fcd424746dba4344b
 
 }
 

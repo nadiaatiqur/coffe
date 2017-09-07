@@ -2,15 +2,15 @@
 <html lang="en"><head>
         <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
         <meta charset="utf-8">
-        <title>Daebak Cafe</title>
+        <title>Admin Theme Demo</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-        <link href="<?php echo base_url('assets/css/bootstrap.css'); ?>" rel="stylesheet">
+        <link href="assets/css/bootstrap.css" rel="stylesheet">
         
         <!--[if lt IE 9]>
           <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
         
-        <link href=" <?php echo base_url('assets/css/admin.css'); ?>" rel="stylesheet">
+        <link href="assets/css/admin.css" rel="stylesheet">
     </head>
     
     <body>
@@ -47,84 +47,89 @@
 
 			  <hr>
 			  
-			  <a href="#"><strong><i class="glyphicon glyphicon-link"></i> Menu Utama</strong></a>  
+			  <a href="#"><strong><i class="glyphicon glyphicon-link"></i> Resources</strong></a>  
 			  
 			  <hr>
 			  
-			   <ul class="nav nav-pills nav-stacked">
-				<li class="nav-header"></li>
-				<li><a href="<?php echo base_url('index.php/Welcome/profil'); ?>"><i class="glyphicon glyphicon-list"></i> Profil Admin</a></li>
-				<li><a href="<?php echo base_url('index.php/Welcome/menu'); ?>"><i class="glyphicon glyphicon-link"></i> Update Menu</a></li>
-				<li><a href="<?php echo base_url('index.php/Welcome/daftar_pegawai') ; ?>"><i class="glyphicon glyphicon-list-alt"></i> Daftar Pegawai</a></li>
-				<li><a href="<?php echo base_url('index.php/Welcome/laporan'); ?>"><i class="glyphicon glyphicon-book"></i> Laporan Bulanan</a></li>
-				<li><a href="<?php echo base_url('index.php/Welcome/grafik') ?>"><i class="glyphicon glyphicon-star"></i> Grafik</a></li>
-			  </ul>
+			 <ul class="nav nav-pills nav-stacked">
+                <li class="nav-header"></li>
+                <li><a href="<?php echo base_url('index.php/Welcome/profil'); ?>"><i class="glyphicon glyphicon-list"></i> Profil Admin</a></li>
+                <li><a href="<?php echo base_url('index.php/Welcome/menu'); ?>"><i class="glyphicon glyphicon-link"></i> Update Menu</a></li>
+                <li><a href="<?php echo base_url('index.php/Welcome/daftar_pegawai') ; ?>"><i class="glyphicon glyphicon-list-alt"></i> Daftar Pegawai</a></li>
+                <li><a href="<?php echo base_url('index.php/Welcome/laporan'); ?>"><i class="glyphicon glyphicon-book"></i> Laporan Bulanan</a></li>
+                <li><a href="<?php echo base_url('index.php/Welcome/grafik') ?>"><i class="glyphicon glyphicon-star"></i> Grafik</a></li>
+              </ul>
 			</div><!-- /col-3 -->
 			<div class="col-md-9">
 
 			  
 				<div class="row">
 				   
-					
-				  
-					<!-- center left-->	
-					<div class="col-md-6">
-					  
-					  <hr>
-					  
-					  <div class="panel panel-default">
-						  <div class="panel-heading"><h4>Reports</h4></div>
-						  <div class="panel-body">
-							
-							<small>Success</small>
-							<div class="progress">
-							  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100" style="width: 72%">
-								<span class="sr-only">72% Complete</span>
-							  </div>
-							</div>
-							<small>Info</small>
-							<div class="progress">
-							  <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
-								<span class="sr-only">20% Complete</span>
-							  </div>
-							</div>
-							<small>Warning</small>
-							<div class="progress">
-							  <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-								<span class="sr-only">60% Complete (warning)</span>
-							  </div>
-							</div>
-							<small>Danger</small>
-							<div class="progress">
-							  <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
-								<span class="sr-only">80% Complete</span>
-							  </div>
-							</div>
-
-						  </div><!--/panel-body-->
-					  </div><!--/panel-->
-			
 					  <hr>              
 		   
-					</div><!--/col-->
-					  
-						   
-								
-							  </form>
-						
-						
-						  </div><!--/panel content-->
-						</div><!--/panel-->
-					  
-					</div><!--/col-span-6-->
-			 
-			  </div><!--/row-->
-			</div><!--/col-span-9-->
-		</div>
-		</div>
-		<!-- /Main -->
+					</div>
+
+<html>
+    <head>
         
-		<script type="text/javascript" src="assets/js/jquery.js"></script>
+        <!--<style type="text/css">
+            .container {
+                width: 50%;
+                margin: 15px auto;
+            }
+        </style>-->
+        <meta charset="utf-8">
+    		<link   href="<?php echo base_url('asset/css/bootstrap.min.css') ?>" rel="stylesheet">
+    		<script src="<?php echo base_url('Chart.js/Chart.bundle.js') ?>"></script>
+    		<!--<script src="js/bootstrap.min.js"></script>-->
+    </head>
+    <body>
+        <div width: 0px margin: 0px auto>
+            <canvas id="myChart" width="0" height="0"></canvas>
+        </div>
+        <script>
+            var ctx = document.getElementById("myChart");
+            var myChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+                    datasets: [{
+                            label: '# of Votes',
+                            data: [12, 19, 3, 5, 2, 3],
+                            backgroundColor: [
+                                'rgba(255, 99, 132, 0.2)',
+                                'rgba(54, 162, 235, 0.2)',
+                                'rgba(255, 206, 86, 0.2)',
+                                'rgba(75, 192, 192, 0.2)',
+                                'rgba(153, 102, 255, 0.2)',
+                                'rgba(255, 159, 64, 0.2)'
+                            ],
+                            borderColor: [
+                                'rgba(255,99,132,1)',
+                                'rgba(54, 162, 235, 1)',
+                                'rgba(255, 206, 86, 1)',
+                                'rgba(75, 192, 192, 1)',
+                                'rgba(153, 102, 255, 1)',
+                                'rgba(255, 159, 64, 1)'
+                            ],
+                            borderWidth: 1
+                        }]
+                },
+                options: {
+                    scales: {
+                        yAxes: [{
+                                ticks: {
+                                    beginAtZero: true
+                                }
+                            }]
+                    }
+                }
+            });
+        </script>
+    </body>
+</html>
+
+<script type="text/javascript" src="assets/js/jquery.js"></script>
         <script type="text/javascript" src="assets/js/bootstrap.js"></script>
         <script type="text/javascript">
         $(document).ready(function() {
