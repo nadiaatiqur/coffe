@@ -67,12 +67,15 @@ class M_cafe extends CI_Model {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	public function input_pesan($table,$data)
 	{
 		$this->db->insert($table,$data);
 	}
 
 =======
+=======
+>>>>>>> d805ad46e00cbccefd7fba1fcd424746dba4344b
 =======
 >>>>>>> d805ad46e00cbccefd7fba1fcd424746dba4344b
 	public function hapus_menu($table,$where)
@@ -97,6 +100,9 @@ class M_cafe extends CI_Model {
 		$this->db->update($table,$data);
 	}
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> d805ad46e00cbccefd7fba1fcd424746dba4344b
+=======
 >>>>>>> d805ad46e00cbccefd7fba1fcd424746dba4344b
 =======
 >>>>>>> d805ad46e00cbccefd7fba1fcd424746dba4344b
