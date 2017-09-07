@@ -146,7 +146,7 @@ class Welcome extends CI_Controller {
 		$Minuman = $this->input->post('Minuman');
 		$Harga = $this->input->post('Harga');
 		$Gambar = $this->input->post('Gambar');
-
+	
 		$data = array
 		(	'makanan' => $Makanan,
 			'minuman' => $Minuman,
@@ -154,6 +154,38 @@ class Welcome extends CI_Controller {
 			'gambar' => $Gambar );
 
 		$this->m_cafe->input_menu('menu',$data);
+		redirect('Welcome/menu');
+	}
+
+	public function hapus_menu($id)
+	{
+			$where = array ('id' => $id);
+			$this->m_cafe->hapus_menu('menu',$where);
+			redirect('Welcome/menu');
+	}
+
+	public function edit_menu($id)
+	{
+		$where = array('id' => $id );
+		$data['menu'] = $this->m_cafe->edit_menu('menu',$where)->result();
+		$this->load->view('edit_menu', $data);
+	}
+
+	public function update_menu($id)
+	{
+		$Makanan = $this->input->post('Makanan');
+		$Minuman = $this->input->post('Minuman');
+		$Harga = $this->input->post('Harga');
+		$Gambar = $this->input->post('Gambar');
+
+		$data = array ('makanan' => $Makanan,
+					   'minuman' => $Minuman,
+			           'harga' => $Harga,
+			           'gambar' => $Gambar);
+		
+		$where = array ('id' => $id);
+
+		$this->m_cafe->update_menucafe('menu',$where,$data);
 		redirect('Welcome/menu');
 	}
 
