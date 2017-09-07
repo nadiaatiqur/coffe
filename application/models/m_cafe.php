@@ -65,6 +65,11 @@ class M_cafe extends CI_Model {
 		$this->db->insert($table,$data);
 	}
 
+	public function input_pesan($table,$data)
+	{
+		$this->db->insert($table,$data);
+	}
+
 
 }
 

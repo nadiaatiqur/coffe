@@ -121,11 +121,11 @@ class Welcome extends CI_Controller {
 		$data = array 
 		(
 			'makan_minum'  => $makan,
-			'minum_minum' => $minum,
+			'makan_minum' => $minum,
 			'harga_menu' => $harga,
 			'jumlah_pesanan' => $jumlah
 			);
-		$this->m_cafe->input_menu('detail',$data);
+		$this->m_cafe->input_pesan('tabel_pesan',$data);
 		redirect('Welcome/detail');
 	}
 

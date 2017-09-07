@@ -66,7 +66,7 @@
 			              	<a href="<?php echo base_url('Welcome/index'); ?>">Home</a></li>
 			              	<li><a href="<?php echo base_url('Welcome/produk'); ?> ">Produk Kami</a></li>
 							<li><a href="<?php echo base_url('Welcome/testimoni'); ?> ">Galeri</a></li>
-                            <li><a href="<?php echo base_url('Welcome/detail'); ?>">Keranjang</a></li>
+                            <li><a href="<?php echo base_url('Welcome/detail'); ?>">Pesanan</a></li>
 		          			<li class="dropdown">
 			                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Login <b class="caret"></b></a>
 			                			<ul class="dropdown-menu">
