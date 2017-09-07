@@ -27,15 +27,106 @@ class Welcome extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('super/tampilan');
+		$this->load->view('profil/utama');
 
 	}
+	public function login()
+	{
+		$this->load->view('login');
+	}
 
+	public function aksi_login()
+	{
+		$username = $this->input->post('username');
+		$password = $this->input->post('password');
+		$where = array(
+			'username' => $username,
+			'password' => $password
+			);
+		$cek = $this->m_cafe->cek_login("login",$where)->num_rows();
+		if($cek>0) {
+			$data_session = array(
+				'nama' => $username,
+				'status' => 'login'
+				);
+			$this->session->set_userdata($data_session);
+			redirect (base_url('Welcome/profil'));
+		} else{
+			echo "Username dan Password Salah!!!";
+		}
+	}
 
+	public function login2()
+	{
+		$this->load->view('login2');
+	}
+	public function aksi_login2()
+	{
+		$username = $this->input->post('username');
+		$password = $this->input->post('password');
+		$where = array(
+			'username' => $username,
+			'password' => $password
+			);
+		$cek = $this->m_cafe->cek_login("login2",$where)->num_rows();
+		if($cek>0) {
+			$data_session = array(
+				'nama' => $username,
+				'status' => 'login'
+				);
+			$this->session->set_userdata($data_session);
+			redirect (base_url('Welcome/profil'));
+		} else{
+			echo "Username dan Password Salah!!!";
+		}
+	}
+
+	public function logout(){
+		$this->session->sess_destroy();
+		redirect(base_url('login'));
+	}
+
+	public function produk()
+	{
+		$this->load->view('produk');
+	}
+
+	public function testimoni()
+	{
+		$this->load->view('testimoni');
+
+	}
+	public function detail()
+	{
+		$this->load->view('detail');
+
+	}
 
 		public function profil()
 	{
 		$this->load->view('super/profil');
+	}
+
+	public function pesan()
+	{
+		$this->load->view('profil/produk');
+	}
+	public function pesan_aksi()
+	{
+		$makan = $this->input->post('makan_minum');
+		$minum = $this->input->post('makan_minum');
+		$harga = $this->input->post('harga_menu');
+		$jumlah = $this->input->post('jumlah_pesanan');
+
+		$data = array 
+		(
+			'makan_minum'  => $makan,
+			'minum_minum' => $minum,
+			'harga_menu' => $harga,
+			'jumlah_pesanan' => $jumlah
+			);
+		$this->m_cafe->input_menu('detail',$data);
+		redirect('Welcome/detail');
 	}
 
 		public function menu()

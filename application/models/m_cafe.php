@@ -9,6 +9,10 @@ class M_cafe extends CI_Model {
 		$this->load->database();
 	}
 
+	public function cek_login($table,$where){
+		return $this->db->get_where($table,$where);
+	}
+
 	public function pegawai($table)
 		{
 			return $this->db->get('pegawai');
@@ -19,6 +23,11 @@ class M_cafe extends CI_Model {
 		$this->db->insert($table,$data);
 	}
 
+
+	public function tampil_data()
+	{
+		return $this->db->get('tabel_pesan');
+	}
 	public function hapus_daftar($table,$where)
 	{
 		$this->db->where($where);
