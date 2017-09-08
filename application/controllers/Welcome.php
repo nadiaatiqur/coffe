@@ -82,8 +82,7 @@ class Welcome extends CI_Controller {
 	}
 
 	public function logout(){
-		$this->session->sess_destroy();
-		redirect(base_url('login'));
+		redirect('Welcome/login');
 	}
 
 	public function produk()
@@ -188,7 +187,7 @@ class Welcome extends CI_Controller {
 		
 		$where = array ('id' => $id);
 
-		$this->m_cafe->update_menucafe('menu',$where,$data);
+		$this->m_cafe->update_menucafe('menu',$data,$where);
 		redirect('Welcome/menu');
 	}
 
@@ -270,9 +269,8 @@ class Welcome extends CI_Controller {
 
 	public function pdf()
 	{
-		$data = array( 'title' => 'Laporan PDF',
-	 'tabel_pesan' => $this->m_cafe->pdf('tabel_pesan'));
-	 $this->load->view('super/laporan');
+		$data ['pesan'] = $this->m_cafe->tampilpdf('tabel_pesan')->result();
+		$this->load->view('super/menu_pdf', $data);
 	}
 
 }

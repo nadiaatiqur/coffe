@@ -44,7 +44,7 @@
 					<li><a href="#">My Profile</a></li>
 				  </ul>
 				</li>
-				<li><a href="#"><i class="glyphicon glyphicon-lock"></i> Logout</a></li>
+				<li><a href="<?php echo base_url('index.php/Welcome/logout') ;?>"><i class="glyphicon glyphicon-lock"></i> Logout</a></li>
 			  </ul>
 			</div>
 		  </div><!-- /container -->
@@ -109,13 +109,13 @@
 						<th>Jumlah Pesanan</th>
 					</thead>
 					<tbody>
-						<?php $i=1; foreach($pesan as $user) { ?>
+						<?php $i=1; foreach($laporan as $user) { ?>
 						 <tr>
 						 <td><?php echo $i ; ?></td>
-						 <td><?php echo $user->makan; ?></td>
-						 <td><?php echo $user->minum; ?></td>
+						 <td><?php echo $user->makanan; ?></td>
+						 <td><?php echo $user->minuman; ?></td>
 						 <td><?php echo $user->harga; ?></td>
-						 <td><?php echo $user->Jumlah_pesanan; ?></td>
+						 <td><?php echo $user->gambar; ?></td>
 						 </tr>
 						 <?php $i++; } ?>
 					</tbody>

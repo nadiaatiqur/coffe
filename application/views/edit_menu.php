@@ -69,7 +69,7 @@
 		   
 					</div><!--/col-->
 					<?php foreach ($menu as $m ) { ?>
-<form action="<?php echo base_url('index.php/Welcome/update_menu').$m->id ;?>" method="post">
+<form action="<?php echo base_url('index.php/Welcome/update_menu/').$m->id ;?>" method="post">
 					  
 						<div class="panel panel-default">
 							<div class="panel-heading">
