@@ -18,7 +18,7 @@
     <!-- start: CSS --> 
     <link href="<?php echo base_url('asset/css/bootstrap.css'); ?> " rel="stylesheet">
     <link href="<?php echo base_url('asset/css/bootstrap-responsive.css'); ?> " rel="stylesheet">
-	<link href="<?php echo base_url('asset/css/style.css'); ?> " rel="stylesheet">
+	<link href="<?php echo base_url('asset/css/detail.css'); ?> " rel="stylesheet">
 	<link href="<?php echo base_url('asset/css/social-icons.css'); ?>" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('http://fonts.googleapis.com/css?family=Droid+Sans:400,700'); ?> ">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('http://fonts.googleapis.com/css?family=Droid+Serif'); ?> ">
@@ -65,7 +65,6 @@
 			              		<li class="active">
 			              	<a href="<?php echo base_url('Welcome/index'); ?>">Home</a></li>
 			              	<li><a href="<?php echo base_url('Welcome/produk'); ?> ">Produk Kami</a></li>
-							<li><a href="<?php echo base_url('Welcome/testimoni'); ?> ">Galeri</a></li>
                             <li><a href="<?php echo base_url('Welcome/detail'); ?>">Pesanan</a></li>
 		          			<li class="dropdown">
 			                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Login <b class="caret"></b></a>
@@ -110,14 +109,13 @@
 	<!-- end: Page Title -->
 	
 	<!--start: Wrapper-->
-	<div id="wrapper">
 				
 		<!-- start: Container -->
 		<div class="container">
-
+			 <form action="<?php echo base_url('index.php/Welcome/pesan'); ?>" method="post">
 			<!-- start: Table -->
             <div class="title"> <h3>Detail Pesanan</h3> </div>
-				<table class="table table-hover table-condensed">
+				<table class="table table-bordered ">
 				<tr>
 					<th><center>No</center></th>
                     <th><center>Makanan dan Minuman</center></th>
@@ -128,10 +126,6 @@
 			   </table>
 		</div>
 		<!-- end: Container -->
-				
-	</div>
-	<!-- end: Wrapper  -->			
-
 	<!-- start: Footer -->
 	<div id="footer">
 		

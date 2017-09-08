@@ -23,7 +23,6 @@ class M_cafe extends CI_Model {
 		$this->db->insert($table,$data);
 	}
 
-
 	public function tampil_data()
 	{
 		return $this->db->get('tabel_pesan');
@@ -55,6 +54,11 @@ class M_cafe extends CI_Model {
 		return $this->db->get($table)->result();
 	}
 
+	public function pdf($table)
+	{
+		return $this->db->get($table)->result();
+	}
+
 	public function menu($table)
 		{
 			return $this->db->get('menu');
@@ -65,13 +69,19 @@ class M_cafe extends CI_Model {
 		$this->db->insert($table,$data);
 	}
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 75054f6d28b9a253cb9153b8f9884e543238925f
 	public function input_pesan($table,$data)
 	{
 		$this->db->insert($table,$data);
 	}
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 75054f6d28b9a253cb9153b8f9884e543238925f
 	public function hapus_menu($table,$where)
 	{
 		$this->db->where($where);
@@ -88,11 +98,26 @@ class M_cafe extends CI_Model {
 		return $this->db->get('menu');
 	}
 
-	public function update_menucafe($table,$where,$data)
+	public function update_menucafe($table,$data,$where)
 	{
 		$this->db->where($where);
 		$this->db->update($table,$data);
 	}
+<<<<<<< HEAD
+=======
+
+	public function grafik()
+	{
+		 $query = $this->db->query("SELECT * from tabel_pesan");
+         
+        if($query->num_rows() > 0){
+            foreach($grap->result() as $data){
+                $hasil[] = $data;
+            }
+            return $hasil;
+        }
+	}
+>>>>>>> 75054f6d28b9a253cb9153b8f9884e543238925f
 
 }
 
