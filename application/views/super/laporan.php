@@ -43,7 +43,11 @@
 					<li><a href="#">My Profile</a></li>
 				  </ul>
 				</li>
+<<<<<<< HEAD
 				<li><a href="<?php echo base_url('index.php/Welcome/logout'); ?>"><i class="glyphicon glyphicon-lock"></i> Logout</a></li>
+=======
+				<li><a href="<?php echo base_url('index.php/Welcome/logout') ;?>"><i class="glyphicon glyphicon-lock"></i> Logout</a></li>
+>>>>>>> 75054f6d28b9a253cb9153b8f9884e543238925f
 			  </ul>
 			</div>
 		  </div><!-- /container -->
@@ -94,7 +98,7 @@
 				</a>
 
 				<div class="row"></div><br><hr>
-				<a href="<?php echo base_url('index.php/Pdf/generate_to_pdf'); ?>" class="btn btn-info">
+				<a href="<?php echo base_url('index.php/Welcome/pdf'); ?>" class="btn btn-info">
 					<i class="glyphicon glyphicon-list"></i> Download Laporan PDF
 				</a>
 				<br><br>
@@ -105,7 +109,7 @@
 						<th>Makanan</th>
 						<th>Minuman</th>
 						<th>Harga</th>
-						<th>Gambar</th>
+						<th>Jumlah Pesanan</th>
 					</thead>
 					<tbody>
 						<?php $i=1; foreach($laporan as $user) { ?>
@@ -120,7 +124,6 @@
 					</tbody>
 				</table>
 				</div>
-			 <div class="end"></div>
 			  </div><!--/row-->
 			</div><!--/col-span-9-->
 		</div>

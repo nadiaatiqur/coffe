@@ -23,7 +23,6 @@ class M_cafe extends CI_Model {
 		$this->db->insert($table,$data);
 	}
 
-
 	public function tampil_data()
 	{
 		return $this->db->get('tabel_pesan');
@@ -55,12 +54,22 @@ class M_cafe extends CI_Model {
 		return $this->db->get($table)->result();
 	}
 
+	public function pdf($table)
+	{
+		return $this->db->get($table)->result();
+	}
+
 	public function menu($table)
 		{
 			return $this->db->get('menu');
 		}
 
 	public function input_menu($table,$data)
+	{
+		$this->db->insert($table,$data);
+	}
+
+	public function input_pesan($table,$data)
 	{
 		$this->db->insert($table,$data);
 	}
@@ -81,20 +90,22 @@ class M_cafe extends CI_Model {
 		return $this->db->get('menu');
 	}
 
-	public function update_menucafe($table,$where,$data)
+	public function update_menucafe($table,$data,$where)
 	{
 		$this->db->where($where);
-		$this->db->update($Otable,$data);
+		$this->db->update($table,$data);
 	}
 
-	public function tampil_pesan($table)
+	public function grafik()
 	{
-		return $this->db->get('tabel_pesan');
-	}
-	
-	public function input_pesan($table,$data)
-	{
-		$this->db->insert($table,$data);
+		 $query = $this->db->query("SELECT * from tabel_pesan");
+         
+        if($query->num_rows() > 0){
+            foreach($grap->result() as $data){
+                $hasil[] = $data;
+            }
+            return $hasil;
+        }
 	}
 
 }

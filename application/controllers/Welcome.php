@@ -82,7 +82,11 @@ class Welcome extends CI_Controller {
 	}
 
 	public function logout(){
+<<<<<<< HEAD
 		redirect('Welcome/login2');
+=======
+		redirect('Welcome/login');
+>>>>>>> 75054f6d28b9a253cb9153b8f9884e543238925f
 	}
 
 	public function produk()
@@ -187,7 +191,7 @@ class Welcome extends CI_Controller {
 		
 		$where = array ('id' => $id);
 
-		$this->m_cafe->update_menucafe('menu',$where,$data);
+		$this->m_cafe->update_menucafe('menu',$data,$where);
 		redirect('Welcome/menu');
 	}
 
@@ -257,12 +261,20 @@ class Welcome extends CI_Controller {
 	public function export_excel(){
 	 $data = array( 'title' => 'Laporan Excel',
 	 'menu' => $this->m_cafe->listing('menu',$data));
-	 $this->load->view('Welcome/super/laporan');	}
-
+	 $this->load->view('Welcome/super/laporan');	
+	}
 
 	public function grafik()
 	{
-		$this->load->view('super/grafik');
+		$data['grap'] = $this->m_cafe->grafik();
+
+		$this->load->view('super/grafik',$data);
+	}
+
+	public function pdf()
+	{
+		$data ['pesan'] = $this->m_cafe->tampilpdf('tabel_pesan')->result();
+		$this->load->view('super/menu_pdf', $data);
 	}
 
 }
