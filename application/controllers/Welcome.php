@@ -82,7 +82,11 @@ class Welcome extends CI_Controller {
 	}
 
 	public function logout(){
+<<<<<<< HEAD
+		redirect('Welcome/login2');
+=======
 		redirect('Welcome/login');
+>>>>>>> 75054f6d28b9a253cb9153b8f9884e543238925f
 	}
 
 	public function produk()
