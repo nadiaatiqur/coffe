@@ -12,28 +12,24 @@
 <body>
   <div class="form">
       
-      <ul class="tab-group">
-        <li class="tab"><a href="#admin">ADMIN</a></li>
-      </ul>
-      
       <div class="tab">
         <div id="admin">    
           <h1>Daebak Cafe</h1>
           
-          <form action="<?php echo base_url('index.php/Login/login/aksi_login'); ?>" method="post">
+          <form action="<?php echo base_url('Welcome/aksi_login'); ?>" method="post">
           
             <div class="field-wrap">
             <label>
               Username<span class="req">*</span>
             </label>
-            <input type="text" />
+            <input type="text" name="username" />
           </div>
           
           <div class="field-wrap">
             <label>
               Password<span class="req">*</span>
             </label>
-            <input type="password" />
+            <input type="password" name="password" />
           </div>
           
           <p class="forgot"><a href="#">Forgot Password?</a></p>

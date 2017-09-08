@@ -11,29 +11,24 @@
 
 <body>
   <div class="form">
-      
-      <ul class="tab-group">
-        <li class="tab"><a href="#super">SUPER ADMIN</a></li>
-      </ul>
-      
       <div class="tab">
-        <div id="super">   
+        <div id="admin">    
           <h1>Daebak Cafe</h1>
           
-          <form action="/" method="post">
+          <form action="<?php echo base_url('Welcome/aksi_login2'); ?>" method="post">
           
             <div class="field-wrap">
             <label>
-              Email Address<span class="req">*</span>
+              Username
             </label>
-            <input type="email"required autocomplete="off"/>
+            <input type="text" name="username" />
           </div>
           
           <div class="field-wrap">
             <label>
-              Password<span class="req">*</span>
+              Password
             </label>
-            <input type="password"required autocomplete="off"/>
+            <input type="password" name="password" />
           </div>
           
           <p class="forgot"><a href="#">Forgot Password?</a></p>
