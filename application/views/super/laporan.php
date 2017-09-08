@@ -107,15 +107,17 @@
 						<th>Minuman</th>
 						<th>Harga</th>
 						<th>Jumlah Pesanan</th>
+						<th>Total Bayar</th>
 					</thead>
 					<tbody>
 						<?php $i=1; foreach($laporan as $user) { ?>
 						 <tr>
 						 <td><?php echo $i ; ?></td>
-						 <td><?php echo $user->makanan; ?></td>
-						 <td><?php echo $user->minuman; ?></td>
-						 <td><?php echo $user->harga; ?></td>
-						 <td><?php echo $user->gambar; ?></td>
+						 <td><?php echo $user->makan; ?></td>
+						 <td><?php echo $user->minum; ?></td>
+						 <td><?php echo $user->jumlah_pesan; ?></td>
+						 <td><?php echo $user->harga_menu; ?></td>
+						 <td><?php echo $user->tabel_harga; ?></td>
 						 </tr>
 						 <?php $i++; } ?>
 					</tbody>

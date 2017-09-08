@@ -6,13 +6,13 @@
 	$pdf->AddPage();
 
 	$pdf->SetFont('Arial','B','20');
-	$pdf->Cell(0,20,$judul,'0',1,'C');
+	$pdf->Cell(0,20,'bbhbhbhbhbh','0',1,'C');
 	$pdf->SetFont('Arial','','10');
 	$pdf->SetFillColor(139,69,19);
 	$pdf->SetDrawColor(222,184,135);
 	foreach ($header as $kolom) {
 		$pdf->Cell($kolom['length'], 5, $kolom['label'], 1, '0', $kolom['align'], true);
-	}
+	}*/
 	$pdf->Ln();
 
 	$pdf->SetFillColor(245, 222, 179);
@@ -28,6 +28,6 @@
 	$fill = !$fill;
 	$pdf->Ln();
 	}
-	$pdf->Output();
+	$pdf->Output('bgrsfsmfkskf','I');
 
  ?>

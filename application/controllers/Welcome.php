@@ -249,7 +249,7 @@ class Welcome extends CI_Controller {
 
 	public function laporan()
 	{
-	$data['laporan'] = $this->m_cafe->listing('menu');
+	$data['laporan'] = $this->m_cafe->listing('tabel_pesan');
 	 $this->load->view('super/laporan', $data);
 	//redirect('Welcome/laporan');
 	 }
@@ -269,7 +269,15 @@ class Welcome extends CI_Controller {
 
 	public function pdf()
 	{
-		$data ['pesan'] = $this->m_cafe->tampilpdf('tabel_pesan')->result();
+		$data['pesan'] = $this->m_cafe->tampilpdf('tabel_pesan')->result();
+		$data['header'] = array(
+			array("label"=>"id","length"=>"30","align"=>"L"),
+			array("label"=>"makanan","length"=>50, "align"=>"L"),
+			array("label"=>"minuman","length"=>50, "align"=>"L"),
+			array("label"=>"harga","length"=>50, "align"=>"L"),
+			array("label"=>"jumlah pesan","length"=>50, "align"=>"L"),
+			array("label"=>"total harga","length"=>50, "align"=>"L")
+			);
 		$this->load->view('super/menu_pdf', $data);
 	}
 

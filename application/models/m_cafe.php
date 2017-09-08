@@ -54,9 +54,9 @@ class M_cafe extends CI_Model {
 		return $this->db->get($table)->result();
 	}
 
-	public function pdf($table)
+	public function tampilpdf($table)
 	{
-		return $this->db->get($table)->result();
+		return $this->db->get($table);
 	}
 
 	public function menu($table)
