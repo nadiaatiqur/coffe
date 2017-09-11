@@ -52,7 +52,11 @@ class Welcome extends CI_Controller {
 			$this->session->set_userdata($data_session);
 			redirect (base_url('Welcome/profil'));
 		} else{
-			echo "Username dan Password Salah!!!";
+			$data['salah'] = '<div class="alert alert-warning alert-dismissable">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+    <strong>Warning!</strong> Ada Nadia Attiqurohmah.
+  </div>';
+  		$this->load->view('login', $data);
 		}
 	}
 
@@ -77,12 +81,20 @@ class Welcome extends CI_Controller {
 			$this->session->set_userdata($data_session);
 			redirect (base_url('Welcome/profil'));
 		} else{
-			echo "Username dan Password Salah!!!";
+			$data['salah'] = '<div class="alert alert-warning alert-dismissable">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+    <strong>Warning!</strong> Ada Nadia Attiqurohmah.
+  </div>';
+
+			$this->load->view('login2', $data);
 		}
 	}
 
 	public function logout(){
+<<<<<<< HEAD
 
+=======
+>>>>>>> d891ed7416d33cf7711222249a3c735f876532a4
 		redirect('Welcome/login2');
 		redirect('Welcome/login');
 	}
