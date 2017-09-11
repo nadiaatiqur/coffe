@@ -69,19 +69,11 @@ class M_cafe extends CI_Model {
 		$this->db->insert($table,$data);
 	}
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 75054f6d28b9a253cb9153b8f9884e543238925f
 	public function input_pesan($table,$data)
 	{
 		$this->db->insert($table,$data);
 	}
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 75054f6d28b9a253cb9153b8f9884e543238925f
 	public function hapus_menu($table,$where)
 	{
 		$this->db->where($where);
@@ -103,8 +95,6 @@ class M_cafe extends CI_Model {
 		$this->db->where($where);
 		$this->db->update($table,$data);
 	}
-<<<<<<< HEAD
-=======
 
 	public function grafik()
 	{
@@ -117,7 +107,6 @@ class M_cafe extends CI_Model {
             return $hasil;
         }
 	}
->>>>>>> 75054f6d28b9a253cb9153b8f9884e543238925f
 
 }
 
