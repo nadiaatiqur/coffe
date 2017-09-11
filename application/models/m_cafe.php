@@ -97,15 +97,8 @@ class M_cafe extends CI_Model {
 	}
 
 	public function grafik()
-	{
-		 $query = $this->db->query("SELECT * from tabel_pesan");
-         
-        if($query->num_rows() > 0){
-            foreach($grap->result() as $data){
-                $hasil[] = $data;
-            }
-            return $hasil;
-        }
+	{ 
+        
 	}
 
 }

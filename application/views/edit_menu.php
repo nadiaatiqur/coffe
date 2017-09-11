@@ -102,6 +102,7 @@
 								<div class="control-group">
 								  <label>Masukkan Gambar</label>
 								  <div class="controls">
+								  <img src="<?php echo base_url('./asset/images/'.$m->gambar); ?>" style="width: 150px;"><br>
 									<input class="form-control" type="file" name="Gambar" value="<?php echo $m->gambar; ?>">
 								  </div>
 								</div> 
