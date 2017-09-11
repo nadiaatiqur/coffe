@@ -91,10 +91,6 @@ class Welcome extends CI_Controller {
 	}
 
 	public function logout(){
-<<<<<<< HEAD
-
-=======
->>>>>>> d891ed7416d33cf7711222249a3c735f876532a4
 		redirect('Welcome/login2');
 		redirect('Welcome/login');
 	}
