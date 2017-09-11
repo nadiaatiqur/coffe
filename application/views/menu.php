@@ -92,8 +92,8 @@
                       <thead>
                      	<tr>
                      	  <th width=25px>No.</th>
-                     	  <th width=100px>Foto</th>
-                          <th >Menu</th>
+                     	  <th width=100px>Makanan</th>
+                          <th >Minuman</th>
                           <th width=70px>Harga</th>
                           <th width="50px">Gambar</th>
                           <th width=123px>Aksi</th>

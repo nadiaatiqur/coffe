@@ -28,7 +28,6 @@
 				
 				<li class="dropdown">
 				  <ul id="g-account-menu" class="dropdown-menu" role="menu">
-					<li><a href="#">My Profile</a></li>
 				  </ul>
 				</li>
 				<li><a href="<?php echo base_url('index.php/Welcome/logout'); ?>"><i class="glyphicon glyphicon-lock"></i> Logout</a></li>
@@ -87,16 +86,9 @@
         <div width: 0px margin: 0px auto>
             <canvas id="myChart" width="0" height="0"></canvas>
         </div>
-        <?php
-    /* Mengambil query report*/
-    foreach($grap as $data){
-        $bulan[] = $data->bulan; //ambil bulan
-        $value[] = (float) $data->nilai; //ambil nilai
-    }
-    /* end mengambil query*/
      
-?>
         <script>
+        
             var ctx = document.getElementById("myChart");
             var myChart = new Chart(ctx, {
                 type: 'bar',

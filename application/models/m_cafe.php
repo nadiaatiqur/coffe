@@ -54,9 +54,9 @@ class M_cafe extends CI_Model {
 		return $this->db->get($table)->result();
 	}
 
-	public function pdf($table)
+	public function tampilpdf($table)
 	{
-		return $this->db->get($table)->result();
+		return $this->db->get($table);
 	}
 
 	public function menu($table)
@@ -97,15 +97,8 @@ class M_cafe extends CI_Model {
 	}
 
 	public function grafik()
-	{
-		 $query = $this->db->query("SELECT * from tabel_pesan");
-         
-        if($query->num_rows() > 0){
-            foreach($grap->result() as $data){
-                $hasil[] = $data;
-            }
-            return $hasil;
-        }
+	{ 
+        
 	}
 
 }

@@ -181,6 +181,24 @@ class Welcome extends CI_Controller {
 		redirect('Welcome/menu');
 	}
 
+	public function aksi_foto(){
+		$config['upload_path']          = './asset/images/';
+		$config['allowed_types']        = 'gif|jpg|png';
+		$config['max_size']             = 100;
+		$config['max_width']            = 1024;
+		$config['max_height']           = 768;
+ 
+		$this->load->library('upload', $config);
+ 
+		if ( ! $this->upload->do_upload('Gambar')){
+			$error = array('error' => $this->upload->display_errors());
+			$this->load->view('menu_tambah', $error);
+		}else{
+			$data = array('upload_data' => $this->upload->data());
+			redirect('Welcome/menu');
+		}
+	}
+
 	public function hapus_menu($id)
 	{
 			$where = array ('id' => $id);
@@ -271,7 +289,7 @@ class Welcome extends CI_Controller {
 
 	public function laporan()
 	{
-	$data['laporan'] = $this->m_cafe->listing('menu');
+	$data['laporan'] = $this->m_cafe->listing('tabel_pesan');
 	 $this->load->view('super/laporan', $data);
 	//redirect('Welcome/laporan');
 	 }
@@ -284,14 +302,20 @@ class Welcome extends CI_Controller {
 
 	public function grafik()
 	{
-		$data['grap'] = $this->m_cafe->grafik();
-
-		$this->load->view('super/grafik',$data);
+		$this->load->view('super/grafik');
 	}
 
 	public function pdf()
 	{
-		$data ['pesan'] = $this->m_cafe->tampilpdf('tabel_pesan')->result();
+		$data['pesan'] = $this->m_cafe->tampilpdf('tabel_pesan')->result();
+		$data['header'] = array(
+			array("label"=>"id","length"=>"30","align"=>"L"),
+			array("label"=>"makanan","length"=>50, "align"=>"L"),
+			array("label"=>"minuman","length"=>50, "align"=>"L"),
+			array("label"=>"harga","length"=>50, "align"=>"L"),
+			array("label"=>"jumlah pesan","length"=>50, "align"=>"L"),
+			array("label"=>"total harga","length"=>50, "align"=>"L")
+			);
 		$this->load->view('super/menu_pdf', $data);
 	}
 

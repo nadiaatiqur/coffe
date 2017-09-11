@@ -99,6 +99,8 @@
 								  </div>
 								</div>
 								<div class="control-group">
+								
+								<?php echo form_open_multipart('Welcome/aksi_foto');?>
 								  <label>Masukkan Gambar</label>
 								  <div class="controls">
 									<input class="form-control" type="file" name="Gambar">
@@ -111,7 +113,7 @@
 								<div class="control-group">
 									<label></label>
 									<div class="controls">
-									<button type="submit" class="btn btn-primary">
+									<button type="submit" class="btn btn-primary" value="aploud">
 									  Post
 									</button><br><br>
 									</div>
