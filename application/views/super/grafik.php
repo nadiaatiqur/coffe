@@ -27,7 +27,6 @@
 			  <ul class="nav navbar-nav navbar-right">
 				
 				<li class="dropdown">
-				  <a class="dropdown-toggle" role="button" data-toggle="dropdown" href="#"><i class="glyphicon glyphicon-user"></i> Admin <span class="caret"></span></a>
 				  <ul id="g-account-menu" class="dropdown-menu" role="menu">
 				  </ul>
 				</li>

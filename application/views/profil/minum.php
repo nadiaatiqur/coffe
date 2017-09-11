@@ -3,33 +3,24 @@
 <head>
 	<!-- start: Meta -->
 	<meta charset="utf-8">
-	<title>DAEBAK CAFE</title> 
+	<title>DistroIT | Distro Online telengkap dan terpercaya di cikarang</title> 
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<!-- end: Mobile Specific -->
 	
-	<!-- start: Facebook Open Graph -->
-	<meta property="og:title" content=""/>
-	<meta property="og:description" content=""/>
-	<meta property="og:type" content=""/>
-	<meta property="og:url" content=""/>
-	<meta property="og:image" content=""/>
-	<!-- end: Facebook Open Graph -->
-
     <!-- start: CSS --> 
     <link href="<?php echo base_url('asset/css/bootstrap.css'); ?> " rel="stylesheet">
     <link href="<?php echo base_url('asset/css/bootstrap-responsive.css'); ?> " rel="stylesheet">
-	<link href="<?php echo base_url('asset/css/detail.css'); ?> " rel="stylesheet">
-	<link href="<?php echo base_url('asset/css/social-icons.css'); ?>" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url('http://fonts.googleapis.com/css?family=Droid+Sans:400,700'); ?> ">
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url('http://fonts.googleapis.com/css?family=Droid+Serif'); ?> ">
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url('http://fonts.googleapis.com/css?family=Boogaloo'); ?> ">
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url('http://fonts.googleapis.com/css?family=Economica:700,400italic'); ?> ">
-	<!-- end: CSS -->
+    <link href="<?php echo base_url('asset/css/style.css'); ?> " rel="stylesheet">
+    <link href="<?php echo base_url('asset/css/social-icons.css'); ?>" rel="stylesheet">
+    <link href="<?php echo base_url('http://fonts.googleapis.com/css?family=Droid+Sans:400,700'); ?> " rel="stylesheet">
+    <link href="<?php echo base_url('http://fonts.googleapis.com/css?family=Droid+Serif'); ?> " rel="stylesheet">
+    <link href="<?php echo base_url('http://fonts.googleapis.com/css?family=Boogaloo">
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Economica:700,400italic'); ?> " rel="stylesheet">
+    
 
-    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+	
+    <script src="<?php echo base_url('http://html5shim.googlecode.com/svn/trunk/html5.js'); ?> "></script>
+   
 </head>
 <body>
     
@@ -45,7 +36,7 @@
 				<!--start: Logo -->
 				<div class="logo span3">
 						
-					<a class="brand" href="#"><img src="<?php echo base_url('asset/images/logo.jpg'); ?>" width="200px" height="200px" alt="Logo"></a>
+					<a class="brand" href="#"><img src="<?php echo base_url('asset/images/logo.jpg'); ?> " width="200px" height="200px" alt="Logo"></a>
 						
 				</div>
 				<!--end: Logo -->
@@ -98,7 +89,7 @@
 			<!-- start: Container -->
 			<div class="container">
 
-				<h2><i class="ico-usd ico-white"></i>Pesanan</h2>
+				<h2><i class="ico-stats ico-white"></i>Produk Kami</h2>
 
 			</div>
 			<!-- end: Container  -->
@@ -107,41 +98,53 @@
 
 	</div>
 	<!-- end: Page Title -->
+
 	
 	<!--start: Wrapper-->
+	<div id="wrapper">
+			<!--start: Container -->
+    	<div class="container"> 
+        <div class="col-md-8 col-sm-12">
+                <form action="<?php echo base_url('index.php/Welcome/pesan_aksi'); ?>" method="POST">
+
+
+                <div id="menu-container">
+                        <div class="row">
+                                <div class="toggle-content text-center" id="tab2">
+                                    <h3>MENU MINUMAN</h3>
+                <div class="col-md-8">
+                <input type="submit" class="btn btn-primary" value="TAMBAH">
+                <br><br>
+                </div> 
+                 <div class="col-md-4">
+                 <div class="thumbnail">
+                 <div class="caption">
+                    <center><img src="<?php echo base_url('asset/images/minum/Exotic-Alien.jpg'); ?>" class="img-responsive" height="200" width="200"><br><br>
+                        <input type="text" name="minum" value="Exotic Alien"><br>
+                        <input type="text" name="harga_minum" value="Rp.18.181"><br>
+                            Jumlah:  <input type="text" name="jumlah_minum"><br><br>
+                    </center>
+                </div>
+                </div>
+                    </div> <!-- /.about -->
+					
+				</div>	
 				
-		<!-- start: Container -->
-		<div class="container">
-			 <form action="<?php echo base_url('index.php/Welcome/pesan'); ?>" method="post">
-			<!-- start: Table -->
-            <div class="title"> <h3>Detail Pesanan</h3> </div>
-				<table class="table table-bordered">
+					</form>
+				</div>
 				
-				<thead>
-				<tr>
-					<th><center>Makanan</center></th>
-                    <th><center>Minuman</center></th>
-					<th><center>Harga Makan</center></th>
-					<th><center>Harga Minum</center></th>
-					<th><center>Jumlah Makanan</center></th>
-					<th><center>Jumlah Minuman</center></th>
-				</tr>
-				</thead>
-				<tbody>
-					<?php $i=1; foreach ($data as $d) { ?>
-					<tr>
-					<td><?php echo $d->makan; ?></td>
-					<td><?php echo $d->minum; ?></td>
-					<td><?php echo $d->harga_makan; ?></td>
-					<td><?php echo $d->jumlah_makan; ?></td>
-					<td><?php echo $d->harga_minum; ?></td>
-					<td><?php echo $d->jumlah_minum; ?></td>
-					</tr>
-					<?php $i++; } ?>
-				</tbody>
-			   </table>
+			</div>
+			<!--end: Row-->
+	
 		</div>
-		<!-- end: Container -->
+		<!--end: Container-->
+				
+		<!--start: Container -->
+		<!--end: Container-->	
+
+	</div>
+	<!-- end: Wrapper  -->			
+
 	<!-- start: Footer -->
 	<div id="footer">
 		
@@ -155,22 +158,21 @@
 				<div class="span3">
 					
 					<h3>Tentang Daebak Cafe</h3>
-					<p>
-						Daebak adalah restoran korea pertama yang mengusung konsep Fan Cafe di Indonesia. Dengan kata lain Daebak adalah The First Korean Fan Cafe in Indonesia. Konsep Korean Fan Cafe memiliki tujuan memberikan pengalaman tidak terlupakan bagi para pecinta Korea, baik suka Korea Karena Kpop, Drama, Pariwisata, atau terlebih lagi karena Kulinernya. Nuansa dan suasana Fan Cafe yang di Daebak begitu kuat terasa dari mulai desain, musik, rasa, makanan, aroma, warna (Experience Korean Taste: sight, sound, scent, taste, and touch) yang semuanya Korea banget!
-					</p>
-						
-				</div>
-				<!-- end: About -->
+                    <p>
+                        Daebak adalah restoran korea pertama yang mengusung konsep Fan Cafe di Indonesia. Dengan kata lain Daebak adalah The First Korean Fan Cafe in Indonesia. Konsep Korean Fan Cafe memiliki tujuan memberikan pengalaman tidak terlupakan bagi para pecinta Korea, baik suka Korea Karena Kpop, Drama, Pariwisata, atau terlebih lagi karena Kulinernya. Nuansa dan suasana Fan Cafe yang di Daebak begitu kuat terasa dari mulai desain, musik, rasa, makanan, aroma, warna (Experience Korean Taste: sight, sound, scent, taste, and touch) yang semuanya Korea banget!
+                    </p>
+                        
+                </div>
+                <!-- end: About -->
 
-				<!-- start: Photo Stream -->
-				<div class="span3">
-					
-					<h3>Alamat Kami</h3>
-					Jl. Bungur No. 130 Jember<br />
+                <!-- start: Photo Stream -->
+                <div class="span3">
+                    
+                    <h3>Alamat Kami</h3>
+                    Jl. Bungur No. 130 Jember<br />
                     Telp : 081234567890<br />
                     Email : <a href="mailto:">daebakcafe@gmail.com</a>
-				</div>
-				<!-- end: Photo Stream -->
+                </div>
 
 				<div class="span6">
 				
@@ -285,9 +287,4 @@
 <!-- end: Java Script -->
 
 </body>
-</html>
-
-
-
-
-
+</html>	

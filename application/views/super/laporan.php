@@ -39,12 +39,15 @@
 			  <ul class="nav navbar-nav navbar-right">
 				
 				<li class="dropdown">
-				  <a class="dropdown-toggle" role="button" data-toggle="dropdown" href="#"><i class="glyphicon glyphicon-user"></i> Admin <span class="caret"></span></a>
 				  <ul id="g-account-menu" class="dropdown-menu" role="menu">
 					<li><a href="#">My Profile</a></li>
 				  </ul>
 				</li>
+<<<<<<< HEAD
+				<li><a href="<?php echo base_url('index.php/Welcome/logout'); ?>"><i class="glyphicon glyphicon-lock"></i> Logout</a></li>
+=======
 				<li><a href="<?php echo base_url('index.php/Welcome/logout') ;?>"><i class="glyphicon glyphicon-lock"></i> Logout</a></li>
+>>>>>>> 75054f6d28b9a253cb9153b8f9884e543238925f
 			  </ul>
 			</div>
 		  </div><!-- /container -->

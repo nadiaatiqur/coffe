@@ -6,6 +6,7 @@
   <link rel="stylesheet" type="text/css" href="<?php echo base_url('asset/css/login.css'); ?> ">
   <link rel="stylesheet" type="text/css" href="<?php echo base_url('https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600'); ?>">
    <link rel="stylesheet" type="text/css" href="<?php echo base_url('https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css'); ?>">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="<?php echo base_url('asset/js/login.js'); ?>"></script>
 </head>
 
@@ -13,10 +14,21 @@
   <div class="form">
       
       <div class="tab">
-        <div id="admin">    
-          <h1>Daebak Cafe</h1>
+        <div id="admin">
+<div class="row">
+  <div class="col-md-2">
+    </div>
+    <div class="col-md-8">
+    <?php 
+        echo @$salah; 
+             ?>
+    </div>
+    <div class="col-md-2">
+    </div>
+</div>    
+          <h1 style="color: white;">Daebak Cafe</h1>
           
-          <form action="<?php echo base_url('Welcome/aksi_login'); ?>" method="post">
+          <form action="<?php echo base_url('index.php/Welcome/aksi_login'); ?>" method="post">
           
             <div class="field-wrap">
             <input type="text" name="username" />

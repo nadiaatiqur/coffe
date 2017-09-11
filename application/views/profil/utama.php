@@ -62,14 +62,15 @@
 			          		</a>
 			          		<div class="nav-collapse collapse">
 			            		<ul class="nav">
-			              			<li><a href=" <?php echo base_url('Welcome/index'); ?>">Home</a></li>
-			              			<li><a href="<?php echo base_url('Welcome/produk'); ?> ">Produk Kami</a></li>
+			              			<li class="active"><a href=" <?php echo base_url('Welcome/index'); ?>">Home</a></li>
+			              			<li><a href="<?php echo base_url('Welcome/produk'); ?> ">Makanan</a></li>
+			              			<li><a href="<?php echo base_url('Welcome/minum'); ?> ">Minuman</a></li>
                                     <li><a href="<?php echo base_url('Welcome/detail'); ?>">Keranjang</a></li>
 			              			<li class="dropdown">
 			                			<a href="#" class="dropdown-toggle" data-toggle="dropdown">Login <b class="caret"></b></a>
 			                			<ul class="dropdown-menu">
 			                  				<li><a href="<?php echo base_url('Welcome/login'); ?>">Admin</a></li>
-			                  				<li><a href="<?php echo base_url('Welcome/login2'); ?>">Super Admin</a></li>			             
+			                  				<li><a href="<?php echo base_url('Welcome/login2'); ?>">Super Admin</a></li>
 			                			</ul>
 			              			</li>
 			            		</ul>

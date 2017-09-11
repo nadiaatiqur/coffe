@@ -54,7 +54,8 @@
 			          		<div class="nav-collapse collapse">
 			            		<ul class="nav">
 			              			<li class="active"><a href=" <?php echo base_url('Welcome/index'); ?>">Home</a></li>
-			              			<li><a href="<?php echo base_url('Welcome/produk'); ?> ">Produk Kami</a></li>
+			              			<li><a href="<?php echo base_url('Welcome/produk'); ?> ">Makanan</a></li>
+			              			<li><a href="<?php echo base_url('Welcome/minum'); ?> ">Minuman</a></li>
                                     <li><a href="<?php echo base_url('Welcome/detail'); ?>">Keranjang</a></li>
 			              			<li class="dropdown">
 			                			<a href="#" class="dropdown-toggle" data-toggle="dropdown">Login <b class="caret"></b></a>
@@ -97,14 +98,16 @@
 
 	</div>
 	<!-- end: Page Title -->
+
 	
 	<!--start: Wrapper-->
 	<div id="wrapper">
-				
-		<!--start: Container -->
+			<!--start: Container -->
     	<div class="container"> 
         <div class="col-md-8 col-sm-12">
-                <form action="<?php echo base_url('index.php/Welcome/pesan_aksi'); ?>" method="post">
+                <form action="<?php echo base_url('index.php/Welcome/pesan_aksi'); ?>" method="POST">
+
+
                 <div id="menu-container">
                         <div class="row">
                             <div class="col-md-12 col-sm-12">
@@ -116,120 +119,17 @@
                  <div class="col-md-4">
                  <div class="thumbnail">
                  <div class="caption">
-                    <center><img src="<?php echo base_url('asset/images/makan/Miyeokguk.jpg') ?>" class="img-responsive" height="200" width="200"><br>
-                        <h4 name="makan">Miyeokguk</h4><br>
-                            <label class="control-label" name="harga">Rp.16.363</label><br><br>
-                            Jumlah:  <input type="text" class="text" name="jumlah"><br><br>
-                    </center>
-                </div>
-                </div>
-                <div class="col-md-15">
-                <div class="thumbnail">
-                <div class="caption">
-                    <center><img src="<?php echo base_url('asset/images/makan/Kimchi-jjigae.jpg') ?>" class="img-responsive" height="200" width="200"><br>
-                        <h4 name="makan">Kimchi Jjigae</h4>
-                            <label class="control-label" name="harga">Rp. 40.909</label><br><br>
-                            Jumlah:  <input type="text" class="text" name="jumlah"><br><br>
-                    </center>
-                </div>
-                </div>
-                <div class="col-md-15">
-                <div class="thumbnail">
-                <div class="caption">
-                    <center><img src="<?php echo base_url('asset/images/makan/Yukgaejang.jpg') ?>" class="img-responsive" height="200" width="200"><br>
-                        <h4 name="makan">Yukgaejang</h4>
-                            <label class="control-label" name="harga">Rp. 43.636</label><br><br>
-                            Jumlah:  <input type="text" class="text" name="jumlah"><br><br>
+                    <center><img src="<?php echo base_url('asset/images/makan/Miyeokguk.jpg') ?>" class="img-responsive" height="200" width="200"><br><br> 
+                        <input type="text" name="makan" value="Miyeokguk"><br>
+                        <input type="text" name="harga_makan" value="Rp.16.363"><br>
+                            Jumlah: <input type="text" name="jumlah_makan"><br><br>
                     </center>
                 </div>
                 </div>
                 </div>
-                </div>
-                </div>
-                <div class="col-md-4">
-                <div class="thumbnail">
-                <div class="caption">
-                    <center><img src="<?php echo base_url('asset/images/makan/Sundubu-jjigae.jpg') ?>" class="img-responsive" height="200" width="200"><br>
-                        <h4 name="makan">Sundubu Jjigae</h4><br>
-                            <label class="control-label" name="harga">Rp. 40.909</label><br><br>
-                            Jumlah:  <input type="text" class="text" name="jumlah"><br><br>
-                    </center>
-                </div>
-                </div>
-                <div class="col-md-15">
-                <div class="thumbnail">
-                <div class="caption">
-                    <center><img src="<?php echo base_url('asset/images/makan/kimbab.jpg') ?>" class="img-responsive" height="200" width="200"><br>
-                <h4 name="makan">Kimbab </h4>
-                    <label class="control-label" name="harga">Rp. 30.909</label><br><br>
-                    Jumlah:  <input type="text" class="text" name="jumlah"><br><br>
-                    </center>
-                </div>
-                </div>
-                </div>
+                
                                 </div>
-
-                                <div class="toggle-content text-center" id="tab2">
-                                    <h3>MENU MINUMAN</h3>
-                                    <div class="col-md-4">
-                 <div class="thumbnail">
-                 <div class="caption">
-                    <center><img src="<?php echo base_url('asset/images/minum/Exotic-Alien.jpg'); ?>" class="img-responsive" height="200" width="200"><br>
-                        <h4 name="minum">Exotic Alien</h4><br>
-                            <label class="control-label" name="harga">Rp.18.181</label><br><br>
-                            Jumlah:  <input type="text" class="text" name="jumlah"><br><br>
-                    </center>
-                </div>
-                </div>
-                <div class="col-md-15">
-                <div class="thumbnail">
-                <div class="caption">
-                    <center><img src="<?php echo base_url('asset/images/minum/Baby-Warrior.jpg'); ?>" class="img-responsive" height="200" width="200"><br>
-                        <h4 name="minum">Baby Warrior</h4>
-                            <label class="control-label" name="harga">Rp. 18.181</label><br><br>
-                            Jumlah:  <input type="text" class="text" name="jumlah"><br><br>
-                    </center>
-                </div>
-                </div>
-                <div class="col-md-15">
-                <div class="thumbnail">
-                <div class="caption">
-                    <center><img src="<?php echo base_url('asset/images/minum/Flying-Bana.jpg'); ?>" class="img-responsive" height="200" width="200"><br>
-                        <h4 name="minum">Flying Bana</h4>
-                            <label class="control-label" name="harga">Rp. 18.181</label><br><br>
-                            Jumlah:  <input type="text" class="text" name="jumlah"><br><br>
-                    </center>
-                </div>
-                </div>
-                </div>
-                </div>
-                </div>
-                <div class="col-md-4">
-                <div class="thumbnail">
-                <div class="caption">
-                    <center><img src="<?php echo base_url('asset/images/minum/Golden-Paradise.jpg'); ?>" class="img-responsive" height="200" width="200"><br>
-                        <h4 name="minum">Golden Paradise</h4><br>
-                            <label class="control-label" name="harga">Rp. 18.181</label><br><br>
-                            Jumlah:  <input type="text" class="text" name="jumlah"><br><br>
-                    </center>
-                </div>
-                </div>
-                <div class="col-md-15">
-                <div class="thumbnail">
-                <div class="caption">
-                    <center><img src="<?php echo base_url('asset/images/minum/Beautiful-Midnight.jpg'); ?>" class="img-responsive" height="200" width="200"><br>
-                <h4 name="minum">Beautiful Midnight</h4>
-                    <label class="control-label" name="harga">Rp. 18.181</label><br><br>
-                    Jumlah:  <input type="text" class="text" name="jumlah"><br><br>
-                    </center>
-                </div>
-                </div>
-                </div>
-                    </div> <!-- /.about -->
-					
-				</div>	
-				
-					
+					</form>
 				</div>
 				
 			</div>
