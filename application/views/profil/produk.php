@@ -127,6 +127,18 @@
                 </div>
                 </div>
                 </div>
+    
+                <div class="col-md-4">
+                 <div class="thumbnail">
+                 <div class="caption">
+                    <center><img src="<?php echo base_url('asset/images/makan/Bibimbab.jpg') ?>" class="img-responsive" height="200" width="200"><br><br> 
+                        <input type="text" name="makan" value="Bibimbab"><br>
+                        <input type="text" name="harga_makan" value="Rp.16.363"><br>
+                            Jumlah: <input type="text" name="jumlah_makan"><br><br>
+                    </center>
+                </div>
+                </div>
+                </div>
                 
                                 </div>
 					</form>

@@ -115,6 +115,40 @@
 			 <form action="<?php echo base_url('index.php/Welcome/pesan'); ?>" method="post">
 			<!-- start: Table -->
             <div class="title"> <h3>Detail Pesanan</h3> </div>
+	            <div class="col-md-4 harga">
+			<a data-toggle="modal" href='#modal-id' class="kusus">
+			<div class="kotak-harga">
+				<div class="garis">
+				  <button class="btn btn-primary">BAYAR</button> 
+				  <h3 id="total" ></h3>
+				</div>
+			</div>
+			</a>
+			<div class="modal fade" id="modal-id">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="tutup" data-dismiss="modal" aria-hidden="true"><i class="fa fa-close"></i></button>
+						<h4 class="modal-title">KALKULATOR</h4>
+					</div>
+					<div class="modal-body text-center">
+						<h4 class="totalan" ></h4>
+						<form>
+						<center >
+						<input type="text" id="bayare" name="" class="form-control" required="required" placeholder="Bayar">
+						</center>
+						<div id="ganti">
+						</div>
+					</div>
+					<div class="modal-footer">
+							<button type="button" id="kembalian" class="btn btn-primary">KEMBALIAN</button>
+							<a class="btn btn-success" href="<?=site_url("myigniter/selesai")?>">SLESAI</a>
+						<form>
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+			</div><!-- /.modal -->
+				</div>
 				<table class="table table-bordered">
 				
 				<thead>
@@ -288,6 +322,4 @@
 </html>
 
 
-
-
-
+<script>

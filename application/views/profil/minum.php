@@ -126,8 +126,19 @@
                     </center>
                 </div>
                 </div>
-                    </div> <!-- /.about -->
-					
+                </div> 
+                
+				<div class="col-md-4">
+                <div class="thumbnail">
+                <div class="caption">
+                    <center><img src="<?php echo base_url('asset/images/minum/Baby-Warrior.jpg'); ?>" class="img-responsive" height="200" width="200"><br><br>
+                        <input type="text" name="minum" value="Baby-Warrior"><br>
+                        <input type="text" name="harga_minum" value="Rp.18.181"><br>
+                            Jumlah:  <input type="text" name="jumlah_minum"><br><br>
+                    </center>
+                </div>
+                </div>
+                </div> 
 				</div>	
 				
 					</form>

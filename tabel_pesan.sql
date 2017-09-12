@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 11, 2017 at 11:26 AM
+-- Generation Time: Sep 12, 2017 at 12:10 PM
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 7.0.8
 
@@ -43,7 +43,9 @@ CREATE TABLE `tabel_pesan` (
 INSERT INTO `tabel_pesan` (`id_tabel`, `makan`, `minum`, `jumlah_makan`, `jumlah_minum`, `harga_makan`, `harga_minum`) VALUES
 (1, 'Miyeokguk', '', '1', '', 'Rp. 18.181', 0),
 (9, 'Miyeokguk', NULL, '2', NULL, 'Rp.16.363', NULL),
-(10, NULL, 'Exotic Alien', NULL, '3', NULL, 0);
+(10, NULL, 'Exotic Alien', NULL, '3', NULL, 0),
+(11, 'Bibimbab', NULL, '1', NULL, 'Rp.16.363', NULL),
+(12, NULL, 'Baby-Warrior', NULL, '3', NULL, 0);
 
 --
 -- Indexes for dumped tables
@@ -63,7 +65,7 @@ ALTER TABLE `tabel_pesan`
 -- AUTO_INCREMENT for table `tabel_pesan`
 --
 ALTER TABLE `tabel_pesan`
-  MODIFY `id_tabel` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id_tabel` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
