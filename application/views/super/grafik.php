@@ -26,10 +26,6 @@
 			<div class="navbar-collapse collapse">
 			  <ul class="nav navbar-nav navbar-right">
 				
-				<li class="dropdown">
-				  <ul id="g-account-menu" class="dropdown-menu" role="menu">
-				  </ul>
-				</li>
 				<li><a href="<?php echo base_url('index.php/Welcome/logout'); ?>"><i class="glyphicon glyphicon-lock"></i> Logout</a></li>
 			  </ul>
 			</div>
@@ -43,10 +39,6 @@
 			<div class="col-md-3">
 			  <!-- Left column -->
 
-			  <hr>
-			  
-			  <a href="#"><strong><i class="glyphicon glyphicon-link"></i> Resources</strong></a>  
-			  
 			  <hr>
 			  
 			 <ul class="nav nav-pills nav-stacked">

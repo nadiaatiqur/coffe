@@ -38,16 +38,7 @@
 			<div class="navbar-collapse collapse">
 			  <ul class="nav navbar-nav navbar-right">
 				
-				<li class="dropdown">
-				  <ul id="g-account-menu" class="dropdown-menu" role="menu">
-					<li><a href="#">My Profile</a></li>
-				  </ul>
-				</li>
-<<<<<<< HEAD
-				<li><a href="<?php echo base_url('index.php/Welcome/logout'); ?>"><i class="glyphicon glyphicon-lock"></i> Logout</a></li>
-=======
 				<li><a href="<?php echo base_url('index.php/Welcome/logout') ;?>"><i class="glyphicon glyphicon-lock"></i> Logout</a></li>
->>>>>>> 75054f6d28b9a253cb9153b8f9884e543238925f
 			  </ul>
 			</div>
 		  </div><!-- /container -->
@@ -60,10 +51,6 @@
 			<div class="col-md-3">
 			  <!-- Left column -->
 
-			  <hr>
-			  
-			  <a href="#"><strong><i class="glyphicon glyphicon-link"></i> Menu Utama</strong></a>  
-			  
 			  <hr>
 			  
 			  <ul class="nav nav-pills nav-stacked">
