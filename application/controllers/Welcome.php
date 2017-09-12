@@ -50,7 +50,7 @@ class Welcome extends CI_Controller {
 				'status' => 'login'
 				);
 			$this->session->set_userdata($data_session);
-			redirect (base_url('Welcome/profil'));
+			redirect (base_url('Welcome/admin'));
 		} else{
 			$data['salah'] = '<div class="alert alert-warning alert-dismissable">
     <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>

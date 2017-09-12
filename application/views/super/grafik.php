@@ -4,13 +4,14 @@
         <meta charset="utf-8">
         <title>Admin Theme Demo</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-        <link href="assets/css/bootstrap.css" rel="stylesheet">
+        <link href="<?php echo base_url('assets/css/bootstrap.css'); ?>" rel="stylesheet">
         
         <!--[if lt IE 9]>
           <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
         
-        <link href="assets/css/admin.css" rel="stylesheet">
+        <link href="<?php echo base_url('assets/css/admin.css'); ?>" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="<?php echo base_url('Chart.js/Chart.bundle.js'); ?>">
     </head>
     
     <body>
@@ -38,10 +39,9 @@
 		<div class="row">
 			<div class="col-md-3">
 			  <!-- Left column -->
-
 			  <hr>
 			  
-			 <ul class="nav nav-pills nav-stacked">
+              <ul class="nav nav-pills nav-stacked">
                 <li class="nav-header"></li>
                 <li><a href="<?php echo base_url('index.php/Welcome/profil'); ?>"><i class="glyphicon glyphicon-list"></i> Profil Admin</a></li>
                 <li><a href="<?php echo base_url('index.php/Welcome/menu'); ?>"><i class="glyphicon glyphicon-link"></i> Update Menu</a></li>
@@ -69,26 +69,26 @@
             }
         </style>-->
         <meta charset="utf-8">
-    		<link   href="<?php echo base_url('asset/css/bootstrap.min.css') ?>" rel="stylesheet">
-    		<script src="<?php echo base_url('Chart.js/Chart.bundle.js') ?>"></script>
+    		<link   href="<?php echo base_url('asset/css/bootstrap.min.css'); ?>" rel="stylesheet">
+    		<script src="<?php echo base_url('Chart.js/Chart.bundle.js'); ?>"></script>
     		<!--<script src="js/bootstrap.min.js"></script>-->
     </head>
     <body>
-    <div id="report"></div>
         <div width: 0px margin: 0px auto>
             <canvas id="myChart" width="0" height="0"></canvas>
         </div>
-     
+         <?php include 'querygrap.php'; ?>
         <script>
-        
+
+       
             var ctx = document.getElementById("myChart");
             var myChart = new Chart(ctx, {
                 type: 'bar',
                 data: {
-                    labels: ["Januari", "Februari", "Maret", "April", "Mei", "Juni","Juli","Agustus","September","Oktober","November","Desember"],
+                    labels: ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"],
                     datasets: [{
                             label: '# of Votes',
-                            data: [12, 19, 3, 5, 2, 3],
+                            data: [<?php echo $ya['SUM(harga_menu)']; ?>, 19, 3, 5, 2, 3],
                             backgroundColor: [
                                 'rgba(255, 99, 132, 0.2)',
                                 'rgba(54, 162, 235, 0.2)',
@@ -108,7 +108,11 @@
                             borderWidth: 1
                         }]
                 },
-                
+                options: {
+                    scales: {
+                        yAxes: [{
+                                ticks: {
+                                    beginAtZero: true
                                 }
                             }]
                     }
