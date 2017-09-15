@@ -12,14 +12,14 @@ class Phpexcel_model extends CI_Model {
     public function ekspor()
     {
         $this->db->select('*');
-        $this->db->from('menu');
+        $this->db->from('tabel_pesan');
         $query = $this->db->get();
         return $query->result();
     }
 
 	 public function upload_data($filename){
         ini_set('memory_limit', '-1');
-        $inputFileName = './asset/images/'.$filename;
+        $inputFileName = './asset/donlot/'.$filename;
         try {
         $objPHPExcel = PHPExcel_IOFactory::load($inputFileName);
         } catch(Exception $e) {
@@ -32,13 +32,16 @@ class Phpexcel_model extends CI_Model {
         for ($i=2; $i < ($numRows+1) ; $i++) { 
  
             $ins = array (
-                    "id"        => $worksheet[$i]["A"],
-                    "makanan"   => $worksheet[$i]["B"],
-                    "minuman"   => $worksheet[$i]["C"],
-                    "harga"     => $worksheet[$i]["D"],
+                    "id"                => $worksheet[$i]["A"],
+                    "makanan"           => $worksheet[$i]["B"],
+                    "minuman"           => $worksheet[$i]["C"],
+                    "jumlah makanan"    => $worksheet[$i]["D"],
+                    "jumlah minuman"    => $worksheet[$i]["E"],
+                    "harga makanan"     => $worksheet[$i]["F"],
+                    "harga minuman"     => $worksheet[$i]["G"]
                    );
  
-            $this->db->insert('menu', $ins);
+            $this->db->insert('tabel_pesan', $ins);
         }
     }
 

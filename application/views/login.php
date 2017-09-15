@@ -38,7 +38,7 @@
             <input type="password" name="password" />
           </div>
           
-          <p class="forgot"><a href="#">Forgot Password?</a></p>
+          <p><a href="<?php echo base_url('index.php/Welcome/index') ?>">KEMBALI KE HALAMAN UTAMA</a></p>
           
           <button class="button button-block"/>Log In</button>
           

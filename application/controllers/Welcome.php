@@ -22,7 +22,7 @@ class Welcome extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->model('m_cafe');
-		$this->load->helper('url');
+		$this->load->helper('url','html');
 	}
 
 	public function index()
@@ -50,7 +50,7 @@ class Welcome extends CI_Controller {
 				'status' => 'login'
 				);
 			$this->session->set_userdata($data_session);
-			redirect (base_url('Welcome/admin'));
+			redirect ('Welcome/menu');
 		} else{
 			$data['salah'] = '<div class="alert alert-warning alert-dismissable">
     <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
@@ -91,22 +91,22 @@ class Welcome extends CI_Controller {
 	}
 
 	public function logout(){
-<<<<<<< HEAD
-
-=======
->>>>>>> ac5b0270c61abd96042cb4bf0f478cb593e1eb1e
 		redirect('Welcome/login2');
 		redirect('Welcome/login');
 	}
 
 	public function produk()
 	{
-		$this->load->view('profil/produk');
+		$data['menu'] = $this->m_cafe->tampil_data('menu')->result();
+
+		$this->load->view('profil/produk',$data);
 	}
 
 	public function minum()
 	{
-		$this->load->view('profil/minum');
+		$data['menu'] = $this->m_cafe->tampil_data('menu')->result();
+
+		$this->load->view('profil/minum', $data);
 	}
 
 	
@@ -135,21 +135,22 @@ class Welcome extends CI_Controller {
 
 	public function pesan_aksi()
 	{
-		$makan = $this->input->post('makan');
-		$minum = $this->input->post('minum');
-		$harga_makan = $this->input->post('harga_makan');
-		$jumlah_makan = $this->input->post('jumlah_makan');
-		$harga_minum = $this->input->post('harga_minum');
-		$jumlah_minum = $this->input->post('jumlah_minum');
+		$makanan = $this->input->post('makanan');
+		$minuman = $this->input->post('minuman');
+		$jumlah_makanan = $this->input->post('jumlah_makanan');
+		$harga_makanan = $this->input->post('harga_makanan');
+		$jumlah_minuman = $this->input->post('jumlah_minuman');
+		$harga_minuman = $this->input->post('harga_minuman');
+		
 
 		$data = array 
 		(
-			'makan'  => $makan,
-			'minum' => $minum,
-			'harga_makan' => $harga_makan,
-			'jumlah_makan' => $jumlah_makan,
-			'harga_minum' => $harga_minum,
-			'jumlah_minum' => $jumlah_minum,
+			'makanan'  => $makanan,
+			'minuman' => $minuman,
+			'jumlah_makanan' => $jumlah_makanan,
+			'harga_makanan' => $harga_makanan,
+			'jumlah_minuman' => $jumlah_minuman,
+			'harga_minuman' => $harga_minuman
 			);
 
 		$this->m_cafe->input_pesan('tabel_pesan',$data);
@@ -159,28 +160,46 @@ class Welcome extends CI_Controller {
 		public function menu()
 	{
 		$data['menu'] = $this->m_cafe->menu('menu_tambah')->result();
-		$this->load->view('menu',$data);
+		$this->load->view('admin/menu',$data);
 	}
 
 	public function menu_tambah()
 	{
-		$this->load->view('menu_tambah');
+		$this->load->view('admin/menu_tambah');
+	}
+
+	public function tambah_minuman()
+	{
+		$this->load->view('admin/tambah_minuman');
 	}
 
 	public function aksi_tambah()
 	{
-		$nama = $this->input->post('Makanan');
-		$nama = $this->input->post('Minuman');
-		$Harga = $this->input->post('Harga');
-		$Gambar = $this->input->post('Gambar');
+		$makanan = $this->input->post('makanan');
+		$marga_makanan = $this->input->post('harga_makanan');
+		$gambar_makanan = $this->input->post('gambar_makanan');
 	
-		$data = array
-		(	'makanan' => $Makanan,
-			'minuman' => $Minuman,
-			'harga' => $Harga,
-			'gambar' => $Gambar );
+		$data = array (	'makanan' => $makanan,
+						'harga_makanan' => $harga_makanan,
+						'gambar_makanan' => $gambar_makanan );
+		
 
-		$this->m_cafe->input_menu('tabel_pesan',$data);
+		$this->m_cafe->input_menu('menu',$data);
+		redirect('Welcome/menu');
+	}
+
+	public function aksi_menu()
+	{
+		$minuman = $this->input->post('minuman');
+		$harga_minuman = $this->input->post('harga_minuman');
+		$Gambar_minuman = $this->input->post('gambar_minuman');
+	
+		$data = array ('minuman' => $minuman,
+						'harga_minuman' => $harga_minuman,
+						'gambar_minuman' => $gambar_minuman );
+		
+
+		$this->m_cafe->menu_input('menu',$data);
 		redirect('Welcome/menu');
 	}
 
@@ -213,7 +232,7 @@ class Welcome extends CI_Controller {
 	{
 		$where = array('id' => $id );
 		$data['menu'] = $this->m_cafe->edit_menu('menu',$where)->result();
-		$this->load->view('edit_menu', $data);
+		$this->load->view('admin/edit_menu', $data);
 	}
 
 	public function update_menu($id)
@@ -224,8 +243,9 @@ class Welcome extends CI_Controller {
 		$Gambar = $this->input->post('Gambar');
 
 		$data = array ('makanan' => $Makanan,
+						'harga_makanan' => $harga_makanan,
 					   'minuman' => $Minuman,
-			           'harga' => $Harga,
+			           'harga_minuman' => $Harga_minuman,
 			           'gambar' => $Gambar);
 		
 		$where = array ('id' => $id);
@@ -299,7 +319,7 @@ class Welcome extends CI_Controller {
 
 	public function export_excel(){
 	 $data = array( 'title' => 'Laporan Excel',
-	 'menu' => $this->m_cafe->listing('menu',$data));
+	 'tabel_pesan' => $this->m_cafe->listing('tabel_pesan',$data));
 	 $this->load->view('Welcome/super/laporan');	
 	}
 
@@ -315,11 +335,25 @@ class Welcome extends CI_Controller {
 			array("label"=>"id","length"=>"30","align"=>"L"),
 			array("label"=>"makanan","length"=>50, "align"=>"L"),
 			array("label"=>"minuman","length"=>50, "align"=>"L"),
-			array("label"=>"harga","length"=>50, "align"=>"L"),
-			array("label"=>"jumlah pesan","length"=>50, "align"=>"L"),
-			array("label"=>"total harga","length"=>50, "align"=>"L")
+			array("label"=>"jumlah makanan","length"=>50, "align"=>"L"),
+			array("label"=>"jumlah minuman","length"=>50, "align"=>"L"),
+			array("label"=>"harga makanan","length"=>50, "align"=>"L"),
+			array("label"=>"harga minuman","length"=>50, "align"=>"L"),
 			);
 		$this->load->view('super/menu_pdf', $data);
 	}
+
+	public function perkalian() 
+    {
+    	$harga_makan = $this->input->post('harga_makan');
+    	$jumlah_makan = $this->input->post('jumlah_makan');
+    	$hitung = $this->input->post('hitung');
+    	$hasil = 0;
+    	if ($hitung == '*') {
+    		$hasil = $harga_makan * $jumlah_makan;
+    	}
+    	$nilai['hasil'] = $hasil;
+    	echo json_encode($nilai);
+    }
 
 }

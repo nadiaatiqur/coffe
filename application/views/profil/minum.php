@@ -98,60 +98,28 @@
 
 	</div>
 	<!-- end: Page Title -->
-
-	
-	<!--start: Wrapper-->
-	<div id="wrapper">
-			<!--start: Container -->
-    	<div class="container"> 
-        <div class="col-md-8 col-sm-12">
-                <form action="<?php echo base_url('index.php/Welcome/pesan_aksi'); ?>" method="POST">
-
-
-                <div id="menu-container">
-                        <div class="row">
-                                <div class="toggle-content text-center" id="tab2">
-                                    <h3>MENU MINUMAN</h3>
-                <div class="col-md-8">
-                <input type="submit" class="btn btn-primary" value="TAMBAH">
-                <br><br>
-                </div> 
-                 <div class="col-md-4">
+<div class="container"> 
+                          
+            <h3>MENU MINUMAN</h3>
+                <?php foreach ($menu as $m) { ?>
+                <form>
+                 <div class="col-md-6 col-md-3">
                  <div class="thumbnail">
-                 <div class="caption">
-                    <center><img src="<?php echo base_url('asset/images/minum/Exotic-Alien.jpg'); ?>" class="img-responsive" height="200" width="200"><br><br>
-                        <input type="text" name="minum" value="Exotic Alien"><br>
-                        <input type="text" name="harga_minum" value="Rp.18.181"><br>
-                            Jumlah:  <input type="text" name="jumlah_minum"><br><br>
-                    </center>
+                   <center><img src="<?php echo base_url('asset/images/').$m->gambar_minuman; ?>" class="img-responsive" height="200" width="200"><br><br>
+                   <input class="form-control" type="text" name="minuman" value="<?php echo $m->minuman; ?>"><br>
+                   <input class="form-control" type="text" name="harga_minuman" value="<?php echo $m->harga_minuman; ?>"><br>
+                   <input class="form-control" placeholder="Masukkan Jumlah Pesanan" type="text" name="jumlah_minuman" value=""><br>
+                    <a href="<?php echo base_url('index.php/Welcome/pesan_aksi'); ?>" class="btn btn-primary">Pesan</a>
+                   </center>
+
                 </div>
                 </div>
-                </div> 
-                
-				<div class="col-md-4">
-                <div class="thumbnail">
-                <div class="caption">
-                    <center><img src="<?php echo base_url('asset/images/minum/Baby-Warrior.jpg'); ?>" class="img-responsive" height="200" width="200"><br><br>
-                        <input type="text" name="minum" value="Baby-Warrior"><br>
-                        <input type="text" name="harga_minum" value="Rp.18.181"><br>
-                            Jumlah:  <input type="text" name="jumlah_minum"><br><br>
-                    </center>
-                </div>
-                </div>
-                </div> 
-				</div>	
-				
-					</form>
-				</div>
-				
-			</div>
-			<!--end: Row-->
+    			<?php } ?>
+    			</form>
 	
 		</div>
-		<!--end: Container-->
-				
-		<!--start: Container -->
-		<!--end: Container-->	
+	
+		
 
 	</div>
 	<!-- end: Wrapper  -->			

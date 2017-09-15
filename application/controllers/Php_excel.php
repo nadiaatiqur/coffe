@@ -19,7 +19,7 @@ class Php_excel extends CI_Controller {
     }
  
     public function do_upload(){
-        $config['upload_path'] = './asset/images/';
+        $config['upload_path'] = './asset/donlot/';
         $config['allowed_types'] = 'xlsx|xls';
         $config['max_size']  = '10000';
         
@@ -35,7 +35,7 @@ class Php_excel extends CI_Controller {
             $upload_data = $this->upload->data(); //Mengambil detail data yang di upload
             $filename = $upload_data['file_name'];//Nama File
             $this->Phpexcel_model->upload_data($filename);
-            unlink('./asset/images/'.$filename);
+            unlink('./asset/donlot/'.$filename);
             redirect('Php_excel/index');
         }
     }
@@ -44,7 +44,7 @@ class Php_excel extends CI_Controller {
     {
          //membuat objek
             $objPHPExcel = new PHPExcel();
-            $data = $this->db->get('menu');
+            $data = $this->db->get('tabel_pesan');
 
             // Nama Field Baris Pertama
             $fields = $data->list_fields();

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 12, 2017 at 12:10 PM
+-- Generation Time: Sep 15, 2017 at 09:26 AM
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 7.0.8
 
@@ -28,24 +28,24 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `tabel_pesan` (
   `id_tabel` int(50) NOT NULL,
-  `makan` varchar(50) DEFAULT NULL,
-  `minum` varchar(50) DEFAULT NULL,
-  `jumlah_makan` varchar(225) DEFAULT NULL,
-  `jumlah_minum` varchar(225) DEFAULT NULL,
-  `harga_makan` varchar(225) DEFAULT NULL,
-  `harga_minum` int(11) DEFAULT NULL
+  `makanan` varchar(50) DEFAULT NULL,
+  `minuman` varchar(50) DEFAULT NULL,
+  `jumlah_makanan` varchar(225) DEFAULT NULL,
+  `harga_makanan` varchar(225) DEFAULT NULL,
+  `jumlah_minuman` varchar(225) DEFAULT NULL,
+  `harga_minuman` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tabel_pesan`
 --
 
-INSERT INTO `tabel_pesan` (`id_tabel`, `makan`, `minum`, `jumlah_makan`, `jumlah_minum`, `harga_makan`, `harga_minum`) VALUES
-(1, 'Miyeokguk', '', '1', '', 'Rp. 18.181', 0),
-(9, 'Miyeokguk', NULL, '2', NULL, 'Rp.16.363', NULL),
-(10, NULL, 'Exotic Alien', NULL, '3', NULL, 0),
-(11, 'Bibimbab', NULL, '1', NULL, 'Rp.16.363', NULL),
-(12, NULL, 'Baby-Warrior', NULL, '3', NULL, 0);
+INSERT INTO `tabel_pesan` (`id_tabel`, `makanan`, `minuman`, `jumlah_makanan`, `harga_makanan`, `jumlah_minuman`, `harga_minuman`) VALUES
+(1, 'Miyeokguk', '', '1', 'Rp. 18.181', '', 0),
+(9, 'Miyeokguk', '', '2', 'Rp.16.363', '', 0),
+(10, '', 'Exotic Alien', '', '', '3', 0),
+(11, 'Bibimbab', '', '1', 'Rp.16.363', '', 0),
+(12, '', 'Baby-Warrior', '', '', '3', 0);
 
 --
 -- Indexes for dumped tables
@@ -65,7 +65,7 @@ ALTER TABLE `tabel_pesan`
 -- AUTO_INCREMENT for table `tabel_pesan`
 --
 ALTER TABLE `tabel_pesan`
-  MODIFY `id_tabel` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id_tabel` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

@@ -1,4 +1,4 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en"><head>
         <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
         <meta charset="utf-8">
@@ -25,8 +25,8 @@
 			</div>
 			<div class="navbar-collapse collapse">
 			  <ul class="nav navbar-nav navbar-right">
-		
-				<li><a href="<?php echo base_url('index.php/Welcome/logout') ;?>"><i class="glyphicon glyphicon-lock"></i> Logout</a></li>
+				
+				<li><a href="<?php echo base_url('index.php/Welcome/logout'); ?>"><i class="glyphicon glyphicon-lock"></i> Logout</a></li>
 			  </ul>
 			</div>
 		  </div><!-- /container -->
@@ -36,6 +36,7 @@
 		<!-- Main -->
 		<div class="container">
 		<div class="row">
+
 			<div class="col-md-9">
 
 				<div class="row">          
@@ -44,53 +45,36 @@
 					<div class="row">           
 		   
 					</div><!--/col-->
-					<?php foreach ($menu as $m ) { ?>
-<form action="<?php echo base_url('index.php/Welcome/update_menu/').$m->id ;?>" method="post">
+			<form action="<?php echo base_url('index.php/Welcome/aksi_tambah') ; ?>" method="post">
 					  
 						<div class="panel panel-default">
 							<div class="panel-heading">
 								<div class="panel-title">
-								<h4>Edit Menu Cafe</h4>
+								<h4>Tambah Menu Cafe</h4>
 								</div>
 							</div>
 							<div class="panel-body">
 
 							  <form class="form form-vertical">
 							   <div class="col-md-6">
-							   <div class="control-group">
-								  <label>Makanan</label>
-								  <div class="controls">
-	 <input class="form-control" placeholder="Masukkan Nama" type="text" name="makanan" value="<?php echo $m->makanan; ?>">
-								  </div>
-								</div> 
-
-								<div class="control-group">
-								  <label>Harga Makanan</label>
-								  <div class="controls">
-	<input class="form-control" placeholder="Masukkan Harga" type="text" name="harga_makanan" value="<?php echo $m->harga_makanan; ?>">
-								  </div>
-								</div>
-
 								    <div class="control-group">
 								  <label>Minuman</label>
 								  <div class="controls">
-	<input class="form-control" placeholder="Masukkan Nama" type="text" name="minuman" value="<?php echo $m->minuman; ?>">
+								   <input class="form-control" placeholder="Masukkan Nama" type="text" name="Minuman">
 								  </div>
 								</div>
-
 								<div class="control-group">
-								  <label>Harga Minuman</label>
+								  <label>Harga</label>
 								  <div class="controls">
-	<input class="form-control" placeholder="Masukkan Harga" type="text" name="harga_minuman" value="<?php echo $m->harga_minuman; ?>">
+								   <input class="form-control" placeholder="Masukkan Harga" type="text" name="Harga_minuman">
 								  </div>
 								</div>
-
 								<div class="control-group">
+								
+								<?php echo form_open_multipart('Welcome/aksi_foto');?>
 								  <label>Masukkan Gambar</label>
 								  <div class="controls">
-								   <?php echo form_open_multipart('Welcome/aksi_foto');?>
-								  <img src="<?php echo base_url('asset/images/').$m->gambar_minuman; ?>" style="width: 150px;"><br>
-									<input class="form-control" type="file" name="gambar_minuman" value="<?php echo $m->gambar_minuman; ?>">
+									<input class="form-control" type="file" name="Gambar">
 								  </div>
 								</div> 
 								  </div>
@@ -100,13 +84,12 @@
 								<div class="control-group">
 									<label></label>
 									<div class="controls">
-									<button type="submit" class="btn btn-primary">
+									<button type="submit" class="btn btn-primary" value="aploud">
 									  Post
 									</button><br><br>
 									</div>
 									</div>
 								</div> 
-								<?php } ?>
 								</form>  
 						
 						  </div><!--/panel content-->

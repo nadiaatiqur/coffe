@@ -36,19 +36,6 @@
 		<!-- Main -->
 		<div class="container">
 		<div class="row">
-			<div class="col-md-3">
-			  <!-- Left column -->
-			  <hr>
-			  
-			  <ul class="nav nav-pills nav-stacked">
-				<li class="nav-header"></li>
-				<li><a href="<?php echo base_url('index.php/Welcome/profil'); ?>"><i class="glyphicon glyphicon-list"></i> Profil Admin</a></li>
-				<li><a href="<?php echo base_url('index.php/Welcome/menu'); ?>"><i class="glyphicon glyphicon-link"></i> Update Menu</a></li>
-				<li><a href="<?php echo base_url('index.php/Welcome/daftar_pegawai') ; ?>"><i class="glyphicon glyphicon-list-alt"></i> Daftar Pegawai</a></li>
-				<li><a href="<?php echo base_url('index.php/Welcome/laporan'); ?>"><i class="glyphicon glyphicon-book"></i> Laporan Bulanan</a></li>
-				<li><a href="<?php echo base_url('index.php/Welcome/grafik') ?>"><i class="glyphicon glyphicon-star"></i> Grafik</a></li>
-			  </ul>
-			</div><!-- /col-3 -->
 			<div class="col-md-9">
 
 			  
@@ -73,19 +60,22 @@
             </div>
             <div class="row">
                 <p>
-                	<a href="<?php echo base_url('index.php/Welcome/menu_tambah'); ?>" class="btn btn-danger">Tambah Menu</a>
+                	<a href="<?php echo base_url('index.php/Welcome/menu_tambah'); ?>" class="btn btn-success">Tambah Makanan</a>
+                	<a href="<?php echo base_url('index.php/Welcome/tambah_minuman'); ?>" class="btn btn-warning">Tambah Minuman</a>
                 </p>
                  <div class="col-md-8">
 
                 <table border="1" class="table table-striped table-bordered">
                       <thead>
                      	<tr>
-                     	  <th width=25px>No.</th>
-                     	  <th width=100px>Makanan</th>
-                          <th >Minuman</th>
-                          <th width=70px>Harga</th>
-                          <th width="50px">Gambar</th>
-                          <th width=123px>Aksi</th>
+                     	  <th width="25px">No.</th>
+                     	  <th width="100px">Makanan</th>
+                     	  <th width="200px">Harga Makanan</th>
+                          <th width="100px">Minuman</th>
+                          <th width="200px">Harga Minuman</th>
+                          <th width="50px">Gambar Makanan</th>
+                          <th width="50px">Gambar Minuman</th>
+                          <th width="200px">Aksi</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -96,9 +86,12 @@
 							<tr>
 								<td><?php echo $i;  ?></td>
 								<td><?php echo $m->makanan ; ?></td>
-								<td><?php echo $m->minuman ; ?></td>
-								<td><?php echo $m->harga ; ?></td>
-								<td><?php echo $m->gambar ; ?></td>
+								<td><?php echo $m->harga_makanan; ?></td>
+								<td><?php echo $m->minuman; ?></td>
+								<td><?php echo $m->harga_minuman; ?></td>
+								<td><?php echo $m->gambar_makanan; ?></td>
+								<td><?php echo $m->gambar_minuman; ?></td>
+
 							<td>
 								<a href="<?php echo base_url('index.php/Welcome/edit_menu/'.$m->id) ; ?>" class="btn btn-primary"><i class="glyphicon glyphicon-pencil"></i></a>
 								<a href="<?php echo base_url('index.php/Welcome/hapus_menu/'.$m->id) ; ?>" class="btn btn-danger"><i class="glyphicon glyphicon-trash"></i></a>

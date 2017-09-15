@@ -23,9 +23,9 @@ class M_cafe extends CI_Model {
 		$this->db->insert($table,$data);
 	}
 
-	public function tampil_data()
+	public function tampil_data($table)
 	{
-		return $this->db->get('tabel_pesan');
+		return $this->db->get($table);
 	}
 	public function hapus_daftar($table,$where)
 	{
@@ -61,12 +61,18 @@ class M_cafe extends CI_Model {
 
 	public function menu($table)
 		{
+			
 			return $this->db->get('menu');
 		}
 
 	public function input_menu($table,$data)
 	{
 		$this->db->insert($table,$data);
+	}
+
+	public function menu_input($table,$data)
+	{
+		$this->db->insert($table,data);
 	}
 
 	public function input_pesan($table,$data)

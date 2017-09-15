@@ -99,62 +99,30 @@
 	</div>
 	<!-- end: Page Title -->
 
-	
-	<!--start: Wrapper-->
-	<div id="wrapper">
 			<!--start: Container -->
     	<div class="container"> 
-        <div class="col-md-8 col-sm-12">
-                <form action="<?php echo base_url('index.php/Welcome/pesan_aksi'); ?>" method="POST">
-
-
-                <div id="menu-container">
-                        <div class="row">
-                            <div class="col-md-12 col-sm-12">
-                                    <h3>MENU MAKANAN</h3>
-                 <div class="col-md-8">
-                        <input type="submit" class="btn btn-primary" value="TAMBAH">
-                        <br><br>
-                </div> 
-                 <div class="col-md-4">
+                          
+            <h3>MENU MAKANAN</h3>
+                <?php foreach ($menu as $m) { ?>
+                <form method="POST" action="<?php base_url('index.php/Welcome/pesan_aksi/'); ?>">
+                 <div class="col-md-6 col-md-3">
                  <div class="thumbnail">
-                 <div class="caption">
-                    <center><img src="<?php echo base_url('asset/images/makan/Miyeokguk.jpg') ?>" class="img-responsive" height="200" width="200"><br><br> 
-                        <input type="text" name="makan" value="Miyeokguk"><br>
-                        <input type="text" name="harga_makan" value="Rp.16.363"><br>
-                            Jumlah: <input type="text" name="jumlah_makan"><br><br>
-                    </center>
+                   <center><img src="<?php echo base_url('asset/images/').$m->gambar_makanan; ?>" class="img-responsive" height="200" width="200"><br><br>
+                   <input class="form-control" type="text" name="makanan" value="<?php echo $m->makanan; ?>"><br>
+                   <input class="form-control" type="text" name="harga_makanan" value="<?php echo $m->harga_makanan; ?>"><br>
+                   <input class="form-control" placeholder="Masukkan Jumlah Pesanan" type="text" name="jumlah_makan">
+                   <br>
+                <button type="submit" class="btn btn-primary">Pesan</button>
+                   </center>
                 </div>
                 </div>
-                </div>
-    
-                <div class="col-md-4">
-                 <div class="thumbnail">
-                 <div class="caption">
-                    <center><img src="<?php echo base_url('asset/images/makan/Bibimbab.jpg') ?>" class="img-responsive" height="200" width="200"><br><br> 
-                        <input type="text" name="makan" value="Bibimbab"><br>
-                        <input type="text" name="harga_makan" value="Rp.16.363"><br>
-                            Jumlah: <input type="text" name="jumlah_makan"><br><br>
-                    </center>
-                </div>
-                </div>
-                </div>
-                
-                                </div>
-					</form>
-				</div>
-				
-			</div>
-			<!--end: Row-->
+                </form>
+    			<?php } ?>
+    			
 	
 		</div>
 		<!--end: Container-->
-				
-		<!--start: Container -->
-		<!--end: Container-->	
 
-	</div>
-	<!-- end: Wrapper  -->			
 
 	<!-- start: Footer -->
 	<div id="footer">

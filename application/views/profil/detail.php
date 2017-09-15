@@ -26,6 +26,7 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('http://fonts.googleapis.com/css?family=Economica:700,400italic'); ?> ">
 	<!-- end: CSS -->
 
+
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -117,12 +118,12 @@
             <div class="title"> <h3>Detail Pesanan</h3> </div>
 	            <div class="col-md-4 harga">
 			<a data-toggle="modal" href='#modal-id' class="kusus">
-			<div class="kotak-harga">
-				<div class="garis">
+
+				
 				  <button class="btn btn-primary">BAYAR</button> 
 				  <h3 id="total" ></h3>
-				</div>
-			</div>
+
+
 			</a>
 			<div class="modal fade" id="modal-id">
 			<div class="modal-dialog">
@@ -155,21 +156,22 @@
 				<tr>
 					<th><center>Makanan</center></th>
                     <th><center>Minuman</center></th>
+                    <th><center>Jumlah Makanan</center></th>
 					<th><center>Harga Makan</center></th>
-					<th><center>Harga Minum</center></th>
-					<th><center>Jumlah Makanan</center></th>
 					<th><center>Jumlah Minuman</center></th>
+					<th><center>Harga Minum</center></th>
+					
 				</tr>
 				</thead>
 				<tbody>
 					<?php $i=1; foreach ($data as $d) { ?>
 					<tr>
-					<td><?php echo $d->makan; ?></td>
-					<td><?php echo $d->minum; ?></td>
-					<td><?php echo $d->harga_makan; ?></td>
-					<td><?php echo $d->jumlah_makan; ?></td>
-					<td><?php echo $d->harga_minum; ?></td>
-					<td><?php echo $d->jumlah_minum; ?></td>
+					<td><?php echo $d->makanan; ?></td>
+					<td><?php echo $d->minuman; ?></td>
+					<td><?php echo $d->jumlah_makanan; ?></td>
+					<td><?php echo $d->harga_makanan; ?></td>
+					<td><?php echo $d->jumlah_minuman; ?></td>
+					<td><?php echo $d->harga_minuman; ?></td>
 					</tr>
 					<?php $i++; } ?>
 				</tbody>

@@ -1,7 +1,7 @@
 <?php 
 $con = mysqli_connect('localhost','root','','cafe');
 
-$dat = mysqli_query($con, "SELECT SUM(harga_menu) FROM tabel_pesan WHERE YEAR(tanggal) = YEAR(NOW()) AND date_format(tanggal, '%m') = '01' ");
+$dat = mysqli_query($con, "SELECT SUM(harga_menu',') FROM tabel_pesan WHERE YEAR(tanggal) = YEAR(NOW()) AND date_format(tanggal, '%m') = '01' ");
 $ya = mysqli_fetch_array($dat);
 
 $dat = mysqli_query($con, "SELECT SUM(harga_menu) FROM tabel_pesan WHERE YEAR(tanggal) = YEAR(NOW()) AND date_format(tanggal, '%m') = '02' ");

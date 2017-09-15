@@ -56,9 +56,10 @@
 			  <ul class="nav nav-pills nav-stacked">
 				<li class="nav-header"></li>
 				<li><a href="<?php echo base_url('index.php/Welcome/profil'); ?>"><i class="glyphicon glyphicon-list"></i> Profil Admin</a></li>
-				<li><a href="<?php echo base_url('index.php/Welcome/menu'); ?>"><i class="glyphicon glyphicon-link"></i> Update Menu</a></li>
 				<li><a href="<?php echo base_url('index.php/Welcome/daftar_pegawai') ; ?>"><i class="glyphicon glyphicon-list-alt"></i> Daftar Pegawai</a></li>
-				<li><a href="<?php echo base_url('index.php/Welcome/laporan'); ?>"><i class="glyphicon glyphicon-book"></i> Laporan Bulanan</a></li>
+				<li><a href="<?php echo base_url('index.php/Welcome/laporan'); ?>"><i class="glyphicon glyphicon-book"></i> Tabel Laporan</a></li>
+				<li><a href="<?php echo base_url('index.php/Php_excel/download/') ?>"><i class="glyphicon glyphicon-file"></i> Download Laporan Excel</a></li>
+				<li><a href="<?php echo base_url('index.php/Welcome/pdf') ?>"><i class="glyphicon glyphicon-file"></i> Download Laporan PDF</a></li>
 				<li><a href="<?php echo base_url('index.php/Welcome/grafik') ?>"><i class="glyphicon glyphicon-star"></i> Grafik</a></li>
 			  </ul>
 			</div><!-- /col-3 -->
@@ -80,14 +81,7 @@
 				  	</label>
 				<button type="submit" class="btn btn-default">Go!</button>
 				</form>
-				<a href="<?php echo base_url('index.php/Php_excel/download/'); ?>" class="btn btn-primary">
-					<i class="glyphicon glyphicon-book"></i> Export Excel
-				</a>
 
-				<div class="row"></div><br><hr>
-				<a href="<?php echo base_url('index.php/Welcome/pdf'); ?>" class="btn btn-info">
-					<i class="glyphicon glyphicon-list"></i> Download Laporan PDF
-				</a>
 				<br><br>
 				<hr>
 				<table border="1" width="100%">
@@ -95,8 +89,10 @@
 						<th>No</th>
 						<th>Makanan</th>
 						<th>Minuman</th>
-						<th>Harga</th>
-						<th>Jumlah Pesanan</th>
+						<th>Jumlah Makanan</th>
+						<th>Jumlah Minuman</th>
+						<th>Harga Makanan</th>
+						<th>Harga Minuman</th>
 					</thead>
 					<tbody>
 						<?php $i=1; foreach($laporan as $user) { ?>
@@ -104,8 +100,10 @@
 						 <td><?php echo $i ; ?></td>
 						 <td><?php echo $user->makan; ?></td>
 						 <td><?php echo $user->minum; ?></td>
-						 <td><?php echo $user->jumlah_pesan; ?></td>
-						 <td><?php echo $user->harga_menu; ?></td>
+						 <td><?php echo $user->jumlah_makan; ?></td>
+						 <td><?php echo $user->jumlah_minum; ?></td>
+						 <td><?php echo $user->harga_makan; ?></td>
+						 <td><?php echo $user->harga_minum; ?></td>
 						 </tr>
 						 <?php $i++; } ?>
 					</tbody>

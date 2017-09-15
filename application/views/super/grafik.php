@@ -2,7 +2,7 @@
 <html lang="en"><head>
         <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
         <meta charset="utf-8">
-        <title>Admin Theme Demo</title>
+        <title>Daebak Cafe</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <link href="<?php echo base_url('assets/css/bootstrap.css'); ?>" rel="stylesheet">
         
@@ -44,9 +44,10 @@
               <ul class="nav nav-pills nav-stacked">
                 <li class="nav-header"></li>
                 <li><a href="<?php echo base_url('index.php/Welcome/profil'); ?>"><i class="glyphicon glyphicon-list"></i> Profil Admin</a></li>
-                <li><a href="<?php echo base_url('index.php/Welcome/menu'); ?>"><i class="glyphicon glyphicon-link"></i> Update Menu</a></li>
                 <li><a href="<?php echo base_url('index.php/Welcome/daftar_pegawai') ; ?>"><i class="glyphicon glyphicon-list-alt"></i> Daftar Pegawai</a></li>
-                <li><a href="<?php echo base_url('index.php/Welcome/laporan'); ?>"><i class="glyphicon glyphicon-book"></i> Laporan Bulanan</a></li>
+                <li><a href="<?php echo base_url('index.php/Welcome/laporan'); ?>"><i class="glyphicon glyphicon-book"></i> Tabel Laporan</a></li>
+                <li><a href="<?php echo base_url('index.php/Php_excel/download/') ?>"><i class="glyphicon glyphicon-file"></i> Download Laporan Excel</a></li>
+                <li><a href="<?php echo base_url('index.php/Welcome/pdf') ?>"><i class="glyphicon glyphicon-file"></i> Download Laporan PDF</a></li>
                 <li><a href="<?php echo base_url('index.php/Welcome/grafik') ?>"><i class="glyphicon glyphicon-star"></i> Grafik</a></li>
               </ul>
 			</div><!-- /col-3 -->

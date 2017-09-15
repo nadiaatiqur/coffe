@@ -36,20 +36,7 @@
 		<!-- Main -->
 		<div class="container">
 		<div class="row">
-			<div class="col-md-3">
-			  <!-- Left column -->
 
-			  <hr>
-			  
-			  <ul class="nav nav-pills nav-stacked">
-				<li class="nav-header"></li>
-				<li><a href="<?php echo base_url('index.php/Welcome/profil'); ?>"><i class="glyphicon glyphicon-list"></i> Profil Admin</a></li>
-				<li><a href="<?php echo base_url('index.php/Welcome/menu'); ?>"><i class="glyphicon glyphicon-link"></i> Update Menu</a></li>
-				<li><a href="<?php echo base_url('index.php/Welcome/daftar_pegawai') ; ?>"><i class="glyphicon glyphicon-list-alt"></i> Daftar Pegawai</a></li>
-				<li><a href="<?php echo base_url('index.php/Welcome/laporan'); ?>"><i class="glyphicon glyphicon-book"></i> Laporan Bulanan</a></li>
-				<li><a href="<?php echo base_url('index.php/Welcome/grafik') ?>"><i class="glyphicon glyphicon-star"></i> Grafik</a></li>
-			  </ul>
-			</div><!-- /col-3 -->
 			<div class="col-md-9">
 
 				<div class="row">          
@@ -58,7 +45,7 @@
 					<div class="row">           
 		   
 					</div><!--/col-->
-					<form action="<?php echo base_url('index.php/Welcome/aksi_tambah') ; ?>" method="post">
+			<form action="<?php echo base_url('index.php/Welcome/aksi_tambah') ; ?>" method="post">
 					  
 						<div class="panel panel-default">
 							<div class="panel-heading">
@@ -76,16 +63,10 @@
 								   <input class="form-control" placeholder="Masukkan Nama" type="text" name="Makanan">
 								  </div>
 								</div> 
-								    <div class="control-group">
-								  <label>Minuman</label>
-								  <div class="controls">
-								   <input class="form-control" placeholder="Masukkan Nama" type="text" name="Minuman">
-								  </div>
-								</div>
 								<div class="control-group">
 								  <label>Harga</label>
 								  <div class="controls">
-								   <input class="form-control" placeholder="Masukkan Nama" type="text" name="Harga">
+								   <input class="form-control" placeholder="Masukkan Harga" type="text" name="Harga_makanan">
 								  </div>
 								</div>
 								<div class="control-group">
